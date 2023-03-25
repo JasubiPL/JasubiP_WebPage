@@ -1,8 +1,9 @@
 ---
-title: 'La inteligencia artificial cómo está cambiando el mundo'
+title: 'Next Js El Mejor Framework para React'
 date: '25-Marzo-2023'
 description: 'La inteligencia artificial (IA) es un campo de la informática que ha experimentado un crecimiento exponencial en los últimos años.'
 keywords: 'Prueba'
+img: '/img/technology/nextjs.png'
 ---
 
 La inteligencia artificial (IA) es un campo de la informática que ha experimentado un crecimiento exponencial en los últimos años. La IA se define como la capacidad de las máquinas para imitar la inteligencia humana y realizar tareas que requieren inteligencia. En este post, exploraremos cómo la inteligencia artificial está cambiando el mundo tal como lo conocemos.

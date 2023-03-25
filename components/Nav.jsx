@@ -1,5 +1,6 @@
-import {GrFacebook} from 'react-icons/gr'
-import{BsTwitter} from 'react-icons/bs'
+import { GrFacebook } from 'react-icons/gr'
+import { GiConversation } from 'react-icons/gi'
+import{ BsTwitter } from 'react-icons/bs'
 import styles from '@/styles/Nav.module.css'
 import Link from 'next/link'
 
@@ -7,7 +8,7 @@ export default function Nav(){
   return(
     <nav className={styles.nav}>
       <Link href='/'>
-        <h2 className={styles.nav_title}>Una Opinión Más</h2>
+        <h2 className={styles.nav_title}>Una Opinión Más <GiConversation /> </h2>
       </Link>
       <div className={styles.nav_socialNetworkIcons}>
         <a href="#">

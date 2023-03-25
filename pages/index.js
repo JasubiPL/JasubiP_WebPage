@@ -2,6 +2,7 @@ import styles from '@/styles/Home.module.css'
 import PageLayout from '@/components/PageLayout'
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -37,12 +38,12 @@ export default function Home({allPostsData}) {
       <section className={styles.articles_container}>
         <h1 className={styles.articles_title}>Ultimos Post</h1>
         <ul className={styles.articles_list}>
-          {allPostsData.map(({ id, title,description }) => (
+          {allPostsData.map(({ id, title,description,img }) => (
             <li className={styles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <h2 className={styles.post_title}>{title}</h2>
-                <p>{description}</p>
-              </Link>
+              <Image src={img} width={100} height={100} layout='responsive'/>
+              <h2 className={styles.post_title}>{title}</h2>
+              <p>{description}</p>
+              <Link href={`/posts/${id}`}>Seguir Leyendo</Link>
             </li>
           ))}
         </ul>

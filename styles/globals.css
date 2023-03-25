@@ -1,9 +1,11 @@
 :root{
   --principal-color: #234fb0;
   --black-color:#101010;
+  --logo-title: 'Josefin Slab', serif;
+  --titles: 'Roboto Mono', monospace;
 }
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Roboto+Mono:wght@100&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 
 *{
   margin: 0;
@@ -17,5 +19,5 @@ body{
 }
 
 h1, h2{
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--titles);
 }
