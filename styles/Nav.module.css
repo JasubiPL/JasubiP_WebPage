@@ -1,0 +1,28 @@
+.nav{
+  background-color: var(--principal-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav_title{
+  font-size: 36px;
+  font-weight: lighter;
+}
+
+.nav_socialNetworkIcons{
+  display: flex;
+  gap: 20px;
+}
+
+.nav_socialNetworkIcons a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  transition: .2s;
+}
+
+.nav_socialNetworkIcons a:hover{
+  transform: scale(1.1);
+}
