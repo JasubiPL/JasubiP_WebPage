@@ -1,0 +1,32 @@
+.articles_container{
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.articles_title{
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.post_title{
+  color: var(--principal-color);
+}
+.articles_container p{
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.listItem{
+  background-color: #1d1d1d;
+  padding: 10px;
+  margin: 10px 0px;
+  border-left: 10px solid var(--principal-color);
+  transition: .2s;
+  cursor: pointer;
+}
+
+.listItem:hover{
+  transform: translateX(10px);
+}

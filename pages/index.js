@@ -1,7 +1,19 @@
 import styles from '@/styles/Home.module.css'
 import PageLayout from '@/components/PageLayout'
+import { getSortedPostsData } from '../lib/posts';
+import Link from 'next/link';
 
-export default function Home() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  console.log(allPostsData)
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Home({allPostsData}) {
   return (
     <PageLayout 
       title='Una Opinion Mas - Home'
@@ -22,7 +34,19 @@ export default function Home() {
       democracia, derechos humanos, economía, política internacional, ideologías políticas, liderazgo, libertad,
       '
     >
-      <h1>Body</h1>
+      <section className={styles.articles_container}>
+        <h1 className={styles.articles_title}>Ultimos Post</h1>
+        <ul className={styles.articles_list}>
+          {allPostsData.map(({ id, title,description }) => (
+            <li className={styles.listItem} key={id}>
+              <Link href={`/posts/${id}`}>
+                <h2 className={styles.post_title}>{title}</h2>
+                <p>{description}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </PageLayout>
   )
 }

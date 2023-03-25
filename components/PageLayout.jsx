@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Nav from './Nav'
+import styles from '@/styles/PageLayout.module.css'
 
 export default function PageLayout({
   children, 
@@ -32,7 +33,7 @@ export default function PageLayout({
     <header>
       <Nav></Nav>
     </header>
-    <main>
+    <main className={styles.main}>
       {children}
     </main>
     </>
