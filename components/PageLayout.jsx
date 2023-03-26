@@ -21,7 +21,7 @@ export default function PageLayout({
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Jasubi Piñeyro - JasubiP" />
       <meta name="robots" content="index, follow" />
-      {canonical}
+      <link rel="canonical" href={canonical} />
       
       {/*  Etiquetas meta para redes sociales */}
       <meta property="og:title" content={title} />
