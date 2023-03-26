@@ -1,6 +1,8 @@
 :root{
   --principal-color: #234fb0;
+  --principal-colore: rgb(35, 79, 176);
   --black-color:#101010;
+  --grey-color:#1d1d1d;
   --logo-title: 'Josefin Slab', serif;
   --titles: 'Roboto Mono', monospace;
 }

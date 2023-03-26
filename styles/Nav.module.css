@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  gap: 10px;
 }
 
 .nav_title{
@@ -32,4 +33,13 @@
 
 .nav_socialNetworkIcons a:hover{
   transform: scale(1.1);
+}
+
+@media screen and (max-width:480px) {
+  .nav_title{
+    font-size: 18px;
+  }
+  .nav_socialNetworkIcons a{
+    font-size: 24px;
+  }
 }

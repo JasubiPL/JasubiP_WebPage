@@ -42,3 +42,19 @@
   margin-top: 20px;
 }
 
+@media screen and (max-width:480px) {
+  .post_header{
+    height: 30vh;
+  }
+  .post_title{
+    font-size: 22px;
+  }
+  .post_container h2{
+    font-size: 18px;
+  }
+  .post_container p{
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+

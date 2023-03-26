@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Nav from './Nav'
 import styles from '@/styles/PageLayout.module.css'
+import Footer from './Footer'
 
 export default function PageLayout({
   children, 
@@ -28,7 +29,7 @@ export default function PageLayout({
       <meta property="og:type" content="website" />
       
       {/* Estilos CSS y otros recursos */}
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/icon/favicon.svg" />
     </Head>
     <header>
       <Nav></Nav>
@@ -36,6 +37,7 @@ export default function PageLayout({
     <main className={styles.main}>
       {children}
     </main>
+    <Footer />
     </>
   )
 }

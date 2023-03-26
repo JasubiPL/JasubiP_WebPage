@@ -1,0 +1,19 @@
+.footer{
+  width: 100%;
+  background-color: var(--grey-color);
+  height: 110px;
+  display: grid;
+  place-content: center;
+}
+
+.footer_center{
+  color: #fff;
+  font-family: var(--titles);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer_center img{
+  width: 100px;
+}
