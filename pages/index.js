@@ -34,6 +34,7 @@ export default function Home({allPostsData}) {
       filosofía política, filosofía de la ciencia, filosofía del arte, actualidad política, 
       democracia, derechos humanos, economía, política internacional, ideologías políticas, liderazgo, libertad,
       '
+      canonical='<link rel="canonical" href="https://unaopinionmas.vercel.app/" />'
     >
       <section className={styles.articles_container}>
         <h1 className={styles.articles_title}>Ultimos Post</h1>
