@@ -1,9 +1,10 @@
 .footer{
   width: 100%;
   background-color: var(--grey-color);
-  height: 110px;
+  padding: 20px 0px;
   display: grid;
   place-content: center;
+  align-self: flex-end;
 }
 
 .footer_center{

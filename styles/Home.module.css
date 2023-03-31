@@ -27,37 +27,14 @@
   gap: 10px;
 }
 
-.listItem{
-  width: 290px;
-  background-color: #1d1d1d;
-  padding: 20px 10px;
-  border-bottom: 10px solid var(--principal-color);
-  transition: .2s;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.listItem:hover{
-  transform: scale(1.05);
-  box-shadow: rgba(35, 79, 176, .5) 0px 3px 8px;
-}
-
 .listItem span{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #fff;
+  color: var(--principal-color);
+  font-size: 14px;
 }
 
 .listItem a{
-  color: #fff;
-  font-family: var(--titles);
-  font-size: 14px;
-  border: 1px solid var(--principal-color);
-  padding: 5px 10px;
-  transition: .2s;
-}
-
-.listItem a:hover{
-  background-color: var(--principal-color);
+  color: none;
 }
 
 @media screen and (max-width:600px) {

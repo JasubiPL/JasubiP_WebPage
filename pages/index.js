@@ -2,7 +2,7 @@ import styles from '@/styles/Home.module.css'
 import PageLayout from '@/components/PageLayout'
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-import Image from 'next/image';
+import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -39,13 +39,47 @@ export default function Home({allPostsData}) {
       <section className={styles.articles_container}>
         <h1 className={styles.articles_title}>Ultimos Post</h1>
         <ul className={styles.articles_list}>
-          {allPostsData.map(({ id, title, description, img, topic, date }) => (
+          {allPostsData.map(({ id, title, description, img, alt, topic, date }) => (
             <li className={styles.listItem} key={id}>
-              <Image src={img} width={100} height={100} layout='responsive'/>
-              <p>{date} | {topic}</p>
-              <h2 className={styles.post_title}>{title}</h2>
-              <p>{description}</p>
-              <Link href={`/posts/${id}`}>Seguir Leyendo</Link>
+              <Card css={{ w: "290px", h: "400px" }}>
+                <Card.Body css={{ p: 0 }}>
+                  <Card.Image
+                    src={img}
+                    width="100%"
+                    height="100%"
+                    objectFit="cover"
+                    alt={title}
+                  />
+                </Card.Body>
+                <Card.Footer
+                  isBlurred
+                  css={{
+                    position: "absolute",
+                    bgBlur: "#234fb066",
+                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
+                    bottom: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <Row>
+                    <Col>
+                      <Text >
+                        {date} | {topic}
+                      </Text>
+                      <Text h2 weight="bold" color="#fff" size={16}>
+                        {title}
+                      </Text>
+                      <Button color="gradient" auto>
+                        <Link href={`posts/${id}`}>
+                          <Text color='#fff'>
+                            Leer Más
+                          </Text>
+                        </Link>
+                      </Button>
+                    </Col>
+                  </Row>
+                </Card.Footer>
+              </Card>
             </li>
           ))}
         </ul>

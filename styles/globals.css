@@ -23,3 +23,6 @@ body{
 h1, h2{
   font-family: var(--titles);
 }
+main{
+  min-height: 85vh;
+}
