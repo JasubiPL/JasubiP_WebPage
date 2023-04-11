@@ -39,7 +39,7 @@ export default function Home({allPostsData}) {
       <section className={styles.articles_container}>
         <h1 className={styles.articles_title}>Ultimos Post</h1>
         <ul className={styles.articles_list}>
-          {allPostsData.map(({ id, title, description, img, alt, topic, date }) => (
+          {allPostsData.map(({ id, title, img, alt, topic, date }) => (
             <li className={styles.listItem} key={id}>
               <Card css={{ w: "290px", h: "400px" }}>
                 <Card.Body css={{ p: 0 }}>
@@ -48,7 +48,7 @@ export default function Home({allPostsData}) {
                     width="100%"
                     height="100%"
                     objectFit="cover"
-                    alt={title}
+                    alt={alt}
                   />
                 </Card.Body>
                 <Card.Footer

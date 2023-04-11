@@ -1,6 +1,7 @@
 import styles from '@/styles/Post.module.css'
 import PageLayout from '@/components/PageLayout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
+import AsideBar from '@/components/AsideBar';
 
 export default function Post({ postData }) {
   return (
@@ -8,12 +9,15 @@ export default function Post({ postData }) {
         <div className={styles.post_header} style={{backgroundImage:`url(${postData.img})`}}>
           <h1 className={styles.post_title}>{postData.title}</h1>
         </div>
-      <article className={styles.post_container}>
-        <small className={styles.post_date}>Publicado: {postData.date}</small>
-        <div className={styles.post_content}>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <section className={styles.post_container}>
+        <AsideBar />
+        <div className={styles.post_info}>
+          <small className={styles.post_date}>Publicado: {postData.date}</small>
+          <div className={styles.post_content}>
+            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          </div>
         </div>
-      </article>
+      </section>
     </PageLayout>
   );
 }

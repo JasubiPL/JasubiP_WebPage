@@ -8,9 +8,16 @@
 }
 .post_container{
   width: 100%;
-  max-width: 1024px;
-  padding: 20px 10px;
+  max-width: 1366px;
+  display: grid;
+  grid-template-columns: 25% 75%;
 }
+
+.post_info{
+  background-color: #222;
+  padding: 20px;
+}
+
 .post_title{
   color: #fff;
   background-color: rgba(0, 0, 0, .8);
