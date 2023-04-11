@@ -8,13 +8,7 @@
 }
 .post_container{
   width: 100%;
-  max-width: 1366px;
-  display: grid;
-  grid-template-columns: 25% 75%;
-}
-
-.post_info{
-  background-color: #222;
+  max-width: 1024px;
   padding: 20px;
 }
 
