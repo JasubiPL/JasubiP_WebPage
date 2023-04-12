@@ -11,10 +11,10 @@ export default function Nav(){
         <h2 className={styles.nav_title}>Una Opinión Más <GiConversation /> </h2>
       </Link>
       <div className={styles.nav_socialNetworkIcons}>
-        <a href="#">
+        <a href="https://www.facebook.com/jasubip" target='blanck'>
           <GrFacebook />
         </a>
-        <a href="#">
+        <a href="https://www.twitter.com/jasubip" target='blanck'>
           <BsTwitter />
         </a>
         <a href="#">
