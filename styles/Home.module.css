@@ -24,7 +24,8 @@
 
 .articles_list{
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .listItem span{
@@ -37,7 +38,7 @@
   color: none;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:820px) {
   .articles_list{
     justify-content: space-around;
   }
