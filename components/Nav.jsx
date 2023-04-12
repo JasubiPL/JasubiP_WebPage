@@ -8,14 +8,14 @@ export default function Nav(){
   return(
     <nav className={styles.nav}>
       <Link href='/'>
-        <h2 className={styles.nav_title}>Una Opinión Más <GiConversation /> </h2>
+        <h2 className={styles.nav_title}>Nobody Cares </h2>
       </Link>
       <div className={styles.nav_socialNetworkIcons}>
         <a href="https://www.facebook.com/jasubip" target='blanck'>
           <GrFacebook />
         </a>
         <a href="https://www.twitter.com/jasubip" target='blanck'>
-          <BsTwitter />
+          <BsTwitter /> 
         </a>
         <a href="#">
           
