@@ -16,7 +16,7 @@ export default function PageLayout({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/*  Etiquetas meta para SEO */}
-      <title>{title}</title>
+      <title>{`${title} | Nobody Cares`}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Jasubi Piñeyro - JasubiP" />

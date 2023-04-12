@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Roboto+Mono:wght@100&display=swap');
 
 .nav{
-  background-color: var(--principal-color);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   gap: 10px;
+  position: fixed;
+  z-index: 9;
 }
 
 .nav_title{
