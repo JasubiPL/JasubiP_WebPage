@@ -17,7 +17,7 @@ export async function getStaticProps() {
 export default function Home({allPostsData}) {
   return (
     <PageLayout 
-      title='Una Opinion Mas - Home'
+      title='Home | Nobody Cares'
       description='
       Descubre en nuestra página web una gran variedad de 
       temas de interés, desde tecnología y ciencia hasta arte y entretenimiento. 

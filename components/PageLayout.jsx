@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 export default function PageLayout({
   children, 
-  title = `Una Opinion Mas`, 
+  title = `Nobody Cares`, 
   canonical,
   description,
   keywords}){
