@@ -1,20 +1,10 @@
 import styles from '@/styles/Home.module.css'
 import PageLayout from '@/components/PageLayout'
-import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-import { Card, Col, Row, Button, Text } from "@nextui-org/react";
+import { getAllFilesMetadata } from '@/lib/mdx';
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  console.log(allPostsData)
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
 
-export default function Home({allPostsData}) {
+export default function Home({ posts }) {
   return (
     <PageLayout 
       title='Home'
@@ -36,54 +26,25 @@ export default function Home({allPostsData}) {
       '
       canonical='https://unaopinionmas.vercel.app/'
     >
-      <section className={styles.articles_container}>
-        <h1 className={styles.articles_title}>Ultimos Post</h1>
-        <ul className={styles.articles_list}>
-          {allPostsData.map(({ id, title, img, alt, topic, date }) => (
-            <li className={styles.listItem} key={id}>
-              <Card css={{ w: "290px", h: "400px" }}>
-                <Card.Body css={{ p: 0 }}>
-                  <Card.Image
-                    src={img}
-                    width="100%"
-                    height="100%"
-                    objectFit="cover"
-                    alt={alt}
-                  />
-                </Card.Body>
-                <Card.Footer
-                  isBlurred
-                  css={{
-                    position: "absolute",
-                    bgBlur: "#234fb066",
-                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
-                    bottom: 0,
-                    zIndex: 1,
-                  }}
-                >
-                  <Row>
-                    <Col>
-                      <Text >
-                        {date} | {topic}
-                      </Text>
-                      <Text h2 weight="bold" color="#fff" size={16}>
-                        {title}
-                      </Text>
-                      <Button color="gradient" auto>
-                        <Link href={`posts/${id}`}>
-                          <Text color='#fff'>
-                            Leer Más
-                          </Text>
-                        </Link>
-                      </Button>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </li>
-          ))}
-        </ul>
+      <section className={styles.poster_blog_container}>
+        {posts.map(post => (
+          <li key={post.slug}>
+            <h1>{post.title}</h1>
+            <Link href={`/posts/${post.slug}`}>Leér Más</Link>
+          </li>
+        ))}
       </section>
     </PageLayout>
   )
+}
+
+export async function getStaticProps() {
+  const posts = await getAllFilesMetadata();
+  console.log(posts)
+
+  return {
+    props: {
+      posts,
+    },
+  };
 }
