@@ -1,14 +1,10 @@
 .footer{
-  position: absolute;
-  bottom: 0;
-  left: 0;
   margin-top: 100px;
   width: 100%;
   background-color: var(--black-color);
   padding: 20px 0px;
   display: grid;
   place-content: center;
-  align-items: flex-end;
 }
 
 .footer_center{

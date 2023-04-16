@@ -3,9 +3,14 @@ import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
 import { FcClapperboard, FcMindMap  } from 'react-icons/fc'
+import { useEffect } from 'react';
+import { startSlider } from '@/lib/handleSlider';
 
 
 export default function Home({ posts }) {
+  let lastPosts = posts.slice(0, 2);
+  useEffect(() => startSlider);
+
   return (
     <PageLayout 
       title='Home'
@@ -27,6 +32,18 @@ export default function Home({ posts }) {
       '
       canonical='https://unaopinionmas.vercel.app/'
     >
+      <section className={styles.slider_container}>
+        {lastPosts.map(post =>(
+          <article key={post.slug} className={`${styles.slide} slide` }>
+            <img src={post.img} alt={post.alt} />
+            <div className={styles.slide_content}>
+              <h2>{post.title}</h2>
+              <p>{post.description}</p>
+              <Link href={`/posts/${post.slug}`}>Ver Post</Link>
+            </div>
+          </article>
+        ))}
+      </section>
       <section className={styles.post_blog_container}>
         <h2 className={styles._blog_container_title}>Ultimos Post</h2>
         {posts.map(post => (
