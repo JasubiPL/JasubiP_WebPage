@@ -1,20 +1,16 @@
 import styles from '@/styles/Home.module.css'
+import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
-import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-import { Card, Col, Row, Button, Text } from "@nextui-org/react";
+import { FcClapperboard, FcMindMap  } from 'react-icons/fc'
+import { useEffect } from 'react';
+import { startSlider } from '@/lib/handleSlider';
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  console.log(allPostsData)
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
 
-export default function Home({allPostsData}) {
+export default function Home({ posts }) {
+  let lastPosts = posts.slice(0, 2);
+  useEffect(() => startSlider);
+
   return (
     <PageLayout 
       title='Home'
@@ -36,54 +32,45 @@ export default function Home({allPostsData}) {
       '
       canonical='https://unaopinionmas.vercel.app/'
     >
-      <section className={styles.articles_container}>
-        <h1 className={styles.articles_title}>Ultimos Post</h1>
-        <ul className={styles.articles_list}>
-          {allPostsData.map(({ id, title, img, alt, topic, date }) => (
-            <li className={styles.listItem} key={id}>
-              <Card css={{ w: "290px", h: "400px" }}>
-                <Card.Body css={{ p: 0 }}>
-                  <Card.Image
-                    src={img}
-                    width="100%"
-                    height="100%"
-                    objectFit="cover"
-                    alt={alt}
-                  />
-                </Card.Body>
-                <Card.Footer
-                  isBlurred
-                  css={{
-                    position: "absolute",
-                    bgBlur: "#234fb066",
-                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
-                    bottom: 0,
-                    zIndex: 1,
-                  }}
-                >
-                  <Row>
-                    <Col>
-                      <Text >
-                        {date} | {topic}
-                      </Text>
-                      <Text h2 weight="bold" color="#fff" size={16}>
-                        {title}
-                      </Text>
-                      <Button color="gradient" auto>
-                        <Link href={`posts/${id}`}>
-                          <Text color='#fff'>
-                            Leer Más
-                          </Text>
-                        </Link>
-                      </Button>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </li>
-          ))}
-        </ul>
+      <section className={styles.slider_container}>
+        {lastPosts.map(post =>(
+          <article key={post.slug} className={`${styles.slide} slide` }>
+            <img src={post.img} alt={post.alt} />
+            <div className={styles.slide_content}>
+              <h2>{post.title}</h2>
+              <p>{post.description}</p>
+              <Link href={`/posts/${post.slug}`}>Ver Post</Link>
+            </div>
+          </article>
+        ))}
+      </section>
+      <section className={styles.post_blog_container}>
+        <h2 className={styles._blog_container_title}>Ultimos Post</h2>
+        {posts.map(post => (
+          <li key={post.slug} className={styles.post_item}>
+            <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
+              <img src={post.img} alt={post.alt} />
+              <h3 className={styles.post_item_title}>{post.title}</h3>
+            </Link>
+            <p className={styles.post_item_footer}>
+              {post.topic}
+              {post.topic === 'Reviews' ? <FcClapperboard /> :
+              post.topic === 'Tecnologia'? <FcMindMap /> : ""}</p>
+            <p className={styles.post_item_footer}>{post.date}</p>
+          </li>
+        ))}
       </section>
     </PageLayout>
   )
+}
+
+export async function getStaticProps() {
+  const posts = await getAllFilesMetadata();
+  console.log(posts)
+
+  return {
+    props: {
+      posts,
+    },
+  };
 }
