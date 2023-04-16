@@ -1,7 +1,8 @@
 import styles from '@/styles/Home.module.css'
+import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
-import { getAllFilesMetadata } from '@/lib/mdx';
+import { FcClapperboard, FcMindMap  } from 'react-icons/fc'
 
 
 export default function Home({ posts }) {
@@ -26,11 +27,19 @@ export default function Home({ posts }) {
       '
       canonical='https://unaopinionmas.vercel.app/'
     >
-      <section className={styles.poster_blog_container}>
+      <section className={styles.post_blog_container}>
+        <h2 className={styles._blog_container_title}>Ultimos Post</h2>
         {posts.map(post => (
-          <li key={post.slug}>
-            <h1>{post.title}</h1>
-            <Link href={`/posts/${post.slug}`}>Leér Más</Link>
+          <li key={post.slug} className={styles.post_item}>
+            <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
+              <img src={post.img} alt={post.alt} />
+              <h3 className={styles.post_item_title}>{post.title}</h3>
+            </Link>
+            <p className={styles.post_item_footer}>
+              {post.topic}
+              {post.topic === 'Reviews' ? <FcClapperboard /> :
+              post.topic === 'Tecnologia'? <FcMindMap /> : ""}</p>
+            <p className={styles.post_item_footer}>{post.date}</p>
           </li>
         ))}
       </section>
