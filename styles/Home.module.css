@@ -42,7 +42,7 @@
 
 .slide_content a{
   color: #fff;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .7);
   backdrop-filter: blur(3px);
   width: fit-content;
   padding: 10px 30px;
