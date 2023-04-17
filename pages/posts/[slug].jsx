@@ -6,7 +6,7 @@ import { MDXRemote } from 'next-mdx-remote';
 export default function Post({ source, frontmatter }) {
   return (
     <PageLayout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords}>
-        <div className={styles.post_header} style={{backgroundImage:`url(${frontmatter.img})`}}>
+        <div className={styles.post_header} style={{backgroundImage:`url(${frontmatter.wallpaper})`}}>
           <h1 className={styles.post_title}>{frontmatter.title}</h1>
         </div>
       <section className={styles.post_container}>

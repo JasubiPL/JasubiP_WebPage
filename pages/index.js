@@ -2,12 +2,13 @@ import styles from '@/styles/Home.module.css'
 import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
-import { FcClapperboard, FcMindMap  } from 'react-icons/fc'
+import { FcClapperboard, FcElectronics  } from 'react-icons/fc'
 import { useEffect } from 'react';
 import { startSlider } from '@/lib/handleSlider';
 
 
 export default function Home({ posts }) {
+  posts.sort((a, b) =>( a.id > b.id) ? -1 : 1);
   let lastPosts = posts.slice(0, 2);
   useEffect(() => startSlider);
 
@@ -35,7 +36,7 @@ export default function Home({ posts }) {
       <section className={styles.slider_container}>
         {lastPosts.map(post =>(
           <article key={post.slug} className={`${styles.slide} slide` }>
-            <img src={post.img} alt={post.alt} />
+            <img src={post.wallpaper} alt={post.alt} />
             <div className={styles.slide_content}>
               <h2>{post.title}</h2>
               <p>{post.description}</p>
@@ -49,13 +50,13 @@ export default function Home({ posts }) {
         {posts.map(post => (
           <li key={post.slug} className={styles.post_item}>
             <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
-              <img src={post.img} alt={post.alt} />
+              <img src={post.poster} alt={post.alt} />
               <h3 className={styles.post_item_title}>{post.title}</h3>
             </Link>
             <p className={styles.post_item_footer}>
               {post.topic}
-              {post.topic === 'Reviews' ? <FcClapperboard /> :
-              post.topic === 'Tecnologia'? <FcMindMap /> : ""}</p>
+              {post.topic === 'Peliculas' ? <FcClapperboard /> :
+              post.topic === 'Tecnologia'? <FcElectronics /> : ""}</p>
             <p className={styles.post_item_footer}>{post.date}</p>
           </li>
         ))}
