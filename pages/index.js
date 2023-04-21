@@ -3,7 +3,7 @@ import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
 import { FcClapperboard, FcElectronics  } from 'react-icons/fc'
-import { useEffect } from 'react';
+import { lazy, useEffect } from 'react';
 import { startSlider } from '@/lib/handleSlider';
 import Image from 'next/image';
 
@@ -37,7 +37,7 @@ export default function Home({ posts }) {
       <section className={styles.slider_container}>
         {lastPosts.map(post =>(
           <article key={post.slug} className={`${styles.slide} slide` }>
-            <Image width={1920} height={600} layout='responsive'  src={post.wallpaper} alt={post.alt} />
+            <Image priority placeholder='blur' width={1920} height={600} layout='responsive'  src={post.wallpaper} alt={post.alt} />
             <div className={styles.slide_content}>
               <h2>{post.title}</h2>
               <p>{post.description}</p>
