@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FcClapperboard, FcElectronics  } from 'react-icons/fc'
 import { useEffect } from 'react';
 import { startSlider } from '@/lib/handleSlider';
+import Image from 'next/image';
 
 
 export default function Home({ posts }) {
@@ -36,7 +37,7 @@ export default function Home({ posts }) {
       <section className={styles.slider_container}>
         {lastPosts.map(post =>(
           <article key={post.slug} className={`${styles.slide} slide` }>
-            <img src={post.wallpaper} alt={post.alt} />
+            <Image width={1920} height={600} layout='responsive'  src={post.wallpaper} alt={post.alt} />
             <div className={styles.slide_content}>
               <h2>{post.title}</h2>
               <p>{post.description}</p>
@@ -50,7 +51,7 @@ export default function Home({ posts }) {
         {posts.map(post => (
           <li key={post.slug} className={styles.post_item}>
             <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
-              <img src={post.poster} alt={post.alt} />
+              <Image width={250} height={444.44} layout='responsive' src={post.poster} alt={post.alt} />
               <h3 className={styles.post_item_title}>{post.title}</h3>
             </Link>
             <p className={styles.post_item_footer}>
@@ -67,7 +68,7 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const posts = await getAllFilesMetadata();
-  console.log(posts)
+  //console.log(posts)
 
   return {
     props: {
