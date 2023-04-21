@@ -37,7 +37,7 @@ export default function Home({ posts }) {
       <section className={styles.slider_container}>
         {lastPosts.map(post =>(
           <article key={post.slug} className={`${styles.slide} slide` }>
-            <Image priority placeholder='blur' width={1920} height={600} layout='responsive'  src={post.wallpaper} alt={post.alt} />
+            <Image priority width={1920} height={600} layout='responsive'  src={post.wallpaper} alt={post.alt} />
             <div className={styles.slide_content}>
               <h2>{post.title}</h2>
               <p>{post.description}</p>
@@ -51,7 +51,7 @@ export default function Home({ posts }) {
         {posts.map(post => (
           <li key={post.slug} className={styles.post_item}>
             <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
-              <Image width={250} height={444.44} layout='responsive' src={post.poster} alt={post.alt} />
+              <Image width={250} height={444.44} loading='lazy' layout='responsive' src={post.poster} alt={post.alt} />
               <h3 className={styles.post_item_title}>{post.title}</h3>
             </Link>
             <p className={styles.post_item_footer}>
