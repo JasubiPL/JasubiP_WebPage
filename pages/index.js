@@ -56,8 +56,8 @@ export default function Home({ posts }) {
             </Link>
             <p className={styles.post_item_footer}>
               {post.topic}
-              {post.topic === 'Peliculas' ? <FcClapperboard /> :
-              post.topic === 'Tecnologia'? <FcElectronics /> : ""}</p>
+              {post.icon === 'Peliculas' ? <FcClapperboard /> :
+              post.icon === 'Tecnologia'? <FcElectronics /> : ""}</p>
             <p className={styles.post_item_footer}>{post.date}</p>
           </li>
         ))}

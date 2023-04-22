@@ -1,4 +1,5 @@
 import styles from '@/styles/Footer.module.css'
+import Image from 'next/image'
 
 export default function Footer(){
   return(
@@ -8,7 +9,7 @@ export default function Footer(){
       target='_blank'
       >
         <p>Con Amor Por</p> 
-        <img src="/img/jasubip-logo.png" alt="Desarrollada por JasubiP" />
+        <Image width={150} height={35} loading='lazy' src="/img/jasubip-logo.png" alt="Desarrollada por JasubiP" />
       </a>
     </footer>
   )
