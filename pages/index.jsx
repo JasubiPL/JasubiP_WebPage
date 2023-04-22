@@ -38,7 +38,7 @@ export default function Home({ posts }) {
       <section className={styles.slider_container}>
         {lastPosts.map(post =>(
           <article key={post.slug} className={`${styles.slide} slide` }>
-            <img priority="true" src={post.wallpaper} alt={post.alt} />
+            <img priority='true' src={post.wallpaper} alt={post.alt} />
             <div className={styles.slide_content}>
               <div className={styles.slide_content_graddient}>
                 <h2>{post.title}</h2>

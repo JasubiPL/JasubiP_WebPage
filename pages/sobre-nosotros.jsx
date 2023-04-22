@@ -1,4 +1,4 @@
-import PageLayout from "@/components/PageLayout";
+import PageLayout from '@/components/PageLayout'
 import styles from '@/styles/SobreNosotros.module.css'
 import{ BsTwitter } from 'react-icons/bs'
 import { AiFillLinkedin } from 'react-icons/ai'
@@ -35,7 +35,7 @@ export default function SobreNosotros() {
         <section className={styles.cards_container}>
           <h2 className={styles.cards_container_title}>Conoce al equipo</h2>
           <article className={styles.card}>
-            <img loading="lazy" src="/img/authors/jasubi.jpg" lat="Autor Jasubi" />
+            <img loading='lazy' src='/img/authors/jasubi.jpg' lat='Autor Jasubi' />
             <h3>Jasubi Piñeyro</h3>
             <p>Autor y Desarrollador del sitio</p>
             <p className={styles.card_description}>
@@ -44,12 +44,12 @@ export default function SobreNosotros() {
             fitness.
             </p>
             <div className={styles.socialnetwork}>
-              <a href="https://twitter.com/JasubiP" target="_blank"><BsTwitter /></a>
-              <a href="https://www.linkedin.com/in/jasubip/" target="_blank"><AiFillLinkedin /></a>
+              <a href='https://twitter.com/JasubiP' target='_blank'><BsTwitter /></a>
+              <a href='https://www.linkedin.com/in/jasubip/' target='_blank'><AiFillLinkedin /></a>
             </div>
           </article>
           <article className={styles.card}>
-            <img loading="lazy" src="/img/authors/erik.jpeg" lat="Autor Jasubi" />
+            <img loading='lazy' src='/img/authors/erik.jpeg' lat='Autor Jasubi' />
             <h3>Erik Guzmán</h3>
             <p>Autor</p>
             <p className={styles.card_description}>
@@ -59,8 +59,8 @@ export default function SobreNosotros() {
             divierta en cada actividad que emprendo, ¡al contrario!
             </p>
             <div className={styles.socialnetwork}>
-              <a href="https://twitter.com/Gatoverik" target="_blank"><BsTwitter /></a>
-              <a href="https://www.linkedin.com/in/erik-guzman-projectmanager/" target="_blank"><AiFillLinkedin /></a>
+              <a href='https://twitter.com/Gatoverik' target='_blank'><BsTwitter /></a>
+              <a href='https://www.linkedin.com/in/erik-guzman-projectmanager/' target='_blank'><AiFillLinkedin /></a>
             </div>
           </article>
         </section>
