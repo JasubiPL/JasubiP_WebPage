@@ -29,7 +29,7 @@ export default function PageLayout({
       <meta property="og:type" content="website" />
       
       {/* Estilos CSS y otros recursos */}
-      <link rel="icon" href="/icon/favicon.svg" />
+      <link rel="icon" href="/img/icon.svg" />
     </Head>
     <header>
       <Nav></Nav>

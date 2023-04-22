@@ -23,27 +23,27 @@
   gap: 10px;
 }
 
-.nav_socialNetworkIcons{
+.menu{
+  height: 100%;
   display: flex;
-  gap: 20px;
 }
 
-.nav_socialNetworkIcons a{
-  text-decoration: none;
+.menu_item a{
   color: #fff;
-  font-size: 30px;
-  transition: .2s;
+  font-size: 24px;
+  transition: all .2s
+}
+.menu_item a:hover{
+  color: var(--principal-color);
 }
 
-.nav_socialNetworkIcons a:hover{
-  transform: scale(1.1);
-}
 
 @media screen and (max-width:480px) {
   .nav_title{
     font-size: 18px;
   }
-  .nav_socialNetworkIcons a{
-    font-size: 24px;
+  .menu_item a{
+    color: #fff;
+    font-size: 18px;
   }
 }
