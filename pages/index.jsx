@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { FcClapperboard, FcElectronics, FcRating  } from 'react-icons/fc'
 import { useEffect } from 'react';
 import { startSlider } from '@/lib/handleSlider';
-import Image from 'next/image';
 import AuthorAvatar from '@/components/AuthorAvatar';
 
 
