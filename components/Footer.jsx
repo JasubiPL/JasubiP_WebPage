@@ -9,7 +9,7 @@ export default function Footer(){
       target='_blank'
       >
         <p>Con Amor Por</p> 
-        <Image width={150} height={35} loading='lazy' src="/img/jasubip-logo.png" alt="Desarrollada por JasubiP" />
+        <img loading='lazy' src="/img/jasubip-logo.png" alt="Desarrollada por JasubiP" />
       </a>
     </footer>
   )

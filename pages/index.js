@@ -39,7 +39,7 @@ export default function Home({ posts }) {
       <section className={styles.slider_container}>
         {lastPosts.map(post =>(
           <article key={post.slug} className={`${styles.slide} slide` }>
-            <Image priority width={1920} height={600} layout='responsive'  src={post.wallpaper} alt={post.alt} />
+            <img priority="true" src={post.wallpaper} alt={post.alt} />
             <div className={styles.slide_content}>
               <div className={styles.slide_content_graddient}>
                 <h2>{post.title}</h2>
@@ -55,12 +55,12 @@ export default function Home({ posts }) {
         {posts.map(post => (
           <li key={post.slug} className={styles.post_item}>
             <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
-              <Image width={250} height={444.44} loading='lazy' layout='responsive' src={post.poster} alt={post.alt} />
+              <img loading='lazy' layout='responsive' src={post.poster} alt={post.alt} />
               <div className={styles._item_title_container}>
                 <div className={styles._item_uthor}>
                   <AuthorAvatar 
-                  width={30}
-                  height={30}
+                  width='30px'
+                  height='30px'
                   authorName={post.author}
                   />
                 </div>

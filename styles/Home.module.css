@@ -117,23 +117,11 @@
   gap: 10px;
 }
 
-._item_uthor{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  gap: 10px;
-  color: #fff
-}
 
-._item_uthor span{
-  width: 35px;
-  height: 35px;
-  border-radius: 50px;
-  overflow: hidden;
-}
 
 .post_item_title{
   color: #fff;
+  overflow-wrap: break-word;
 }
 
 .post_item_footer{
@@ -193,4 +181,13 @@
   .post_item_footer{
     font-size: 12px;
   }
+
+  ._item_title_container, .post_item_title{
+    padding: 5px;
+  }
+  ._item_title_container{
+    gap: 5px;
+  }
+
+  
 }

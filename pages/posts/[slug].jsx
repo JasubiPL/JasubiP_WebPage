@@ -18,8 +18,8 @@ export default function Post({ source, frontmatter }) {
         <AuthorAvatar
           img={frontmatter.img}
           authorName={frontmatter.author}
-          width={50}
-          height={50}/>
+          width='50px'
+          height='50px'/>
       </section>
     </PageLayout>
   );
