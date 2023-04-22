@@ -2,6 +2,7 @@ import { getFiles, getFilesBySlug } from '@/lib/mdx';
 import styles from '@/styles/Post.module.css'
 import PageLayout from '@/components/PageLayout';
 import { MDXRemote } from 'next-mdx-remote';
+import AuthorAvatar from '@/components/AuthorAvatar';
 
 export default function Post({ source, frontmatter }) {
   return (
@@ -10,10 +11,15 @@ export default function Post({ source, frontmatter }) {
           <h1 className={styles.post_title}>{frontmatter.title}</h1>
         </div>
       <section className={styles.post_container}>
-        <small className={styles.post_date}>Publicado: {frontmatter.date}</small>
         <div className={styles.post_content}>
           <MDXRemote {...source} />
         </div>
+        <small className={styles.post_date}>Publicado: {frontmatter.date}</small>
+        <AuthorAvatar
+          img={frontmatter.img}
+          authorName={frontmatter.author}
+          width={50}
+          height={50}/>
       </section>
     </PageLayout>
   );

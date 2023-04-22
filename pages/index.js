@@ -2,7 +2,7 @@ import styles from '@/styles/Home.module.css'
 import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
-import { FcClapperboard, FcElectronics  } from 'react-icons/fc'
+import { FcClapperboard, FcElectronics, FcRating  } from 'react-icons/fc'
 import { useEffect } from 'react';
 import { startSlider } from '@/lib/handleSlider';
 import Image from 'next/image';
@@ -40,9 +40,11 @@ export default function Home({ posts }) {
           <article key={post.slug} className={`${styles.slide} slide` }>
             <Image priority width={1920} height={600} layout='responsive'  src={post.wallpaper} alt={post.alt} />
             <div className={styles.slide_content}>
-              <h2>{post.title}</h2>
-              <p>{post.description}</p>
-              <Link href={`/posts/${post.slug}`}>Ver Post</Link>
+              <div className={styles.slide_content_graddient}>
+                <h2>{post.title}</h2>
+                <p>{post.description}</p>
+                <Link href={`/posts/${post.slug}`}>Ver Post</Link>
+              </div>
             </div>
           </article>
         ))}
@@ -53,12 +55,27 @@ export default function Home({ posts }) {
           <li key={post.slug} className={styles.post_item}>
             <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
               <Image width={250} height={444.44} loading='lazy' layout='responsive' src={post.poster} alt={post.alt} />
-              <h3 className={styles.post_item_title}>{post.title}</h3>
+              <div className={styles._item_title_container}>
+                <div className={styles._item_uthor}>
+                  <span>
+                    <Image
+                      width={35}
+                      height={35}
+                      loading='lazy'
+                      src={post.author === 'JasubiP' ? '/img/authors/jasubi.jpg' : '/img/authors/erik.jpeg'}
+                      alt='Foto del autor'
+                    />
+                  </span>
+                  <p>{post.author}</p>
+                </div>
+                <h3 className={styles.post_item_title}>{post.title}</h3>
+              </div>
             </Link>
             <p className={styles.post_item_footer}>
               {post.topic}
               {post.icon === 'Peliculas' ? <FcClapperboard /> :
-              post.icon === 'Tecnologia'? <FcElectronics /> : ""}</p>
+              post.icon === 'Tecnologia' ? <FcElectronics /> : 
+              post.icon === 'Curiosidades' ? <FcRating /> : ""}</p>
             <p className={styles.post_item_footer}>{post.date}</p>
           </li>
         ))}

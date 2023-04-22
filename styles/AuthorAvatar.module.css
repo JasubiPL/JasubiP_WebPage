@@ -1,0 +1,24 @@
+.author{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.author_img{
+  background-color: blue;
+  aspect-ratio: 1/1;
+  display: flex;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.author_img img{
+  margin: 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+.author_name{
+  color: #fff;
+  font-weight: bolder;
+}
