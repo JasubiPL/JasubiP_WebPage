@@ -1,9 +1,10 @@
 import Image from "next/image";
 import styles from "@/styles/AuthorAvatar.module.css"
+import Link from "next/link";
 
-export default function AuthorAvatar({img, authorName, width, height}) {
+export default function AuthorAvatar({ authorName, width, height}) {
   return (
-    <a href="/" className={styles.author}>
+    <Link href="/" className={styles.author}>
       <div className={styles.author_img}>
         <Image src={authorName === 'JasubiP' ? '/img/authors/jasubi.jpg' : '/img/authors/erik.jpeg'}
           width={width} 
@@ -15,6 +16,6 @@ export default function AuthorAvatar({img, authorName, width, height}) {
       <div className={styles.author_name}>
         {authorName}
       </div>
-    </a>
+    </Link>
   );
 };

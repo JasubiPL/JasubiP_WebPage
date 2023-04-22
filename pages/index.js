@@ -6,6 +6,7 @@ import { FcClapperboard, FcElectronics, FcRating  } from 'react-icons/fc'
 import { useEffect } from 'react';
 import { startSlider } from '@/lib/handleSlider';
 import Image from 'next/image';
+import AuthorAvatar from '@/components/AuthorAvatar';
 
 
 
@@ -57,16 +58,11 @@ export default function Home({ posts }) {
               <Image width={250} height={444.44} loading='lazy' layout='responsive' src={post.poster} alt={post.alt} />
               <div className={styles._item_title_container}>
                 <div className={styles._item_uthor}>
-                  <span>
-                    <Image
-                      width={35}
-                      height={35}
-                      loading='lazy'
-                      src={post.author === 'JasubiP' ? '/img/authors/jasubi.jpg' : '/img/authors/erik.jpeg'}
-                      alt='Foto del autor'
-                    />
-                  </span>
-                  <p>{post.author}</p>
+                  <AuthorAvatar 
+                  width={30}
+                  height={30}
+                  authorName={post.author}
+                  />
                 </div>
                 <h3 className={styles.post_item_title}>{post.title}</h3>
               </div>
