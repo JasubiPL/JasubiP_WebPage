@@ -3,15 +3,16 @@ import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
 import { FcClapperboard, FcElectronics  } from 'react-icons/fc'
-import { lazy, useEffect } from 'react';
+import { useEffect } from 'react';
 import { startSlider } from '@/lib/handleSlider';
 import Image from 'next/image';
+
 
 
 export default function Home({ posts }) {
   posts.sort((a, b) =>( a.id > b.id) ? -1 : 1);
   let lastPosts = posts.slice(0, 2);
-  useEffect(() => startSlider);
+  useEffect(() => startSlider());
 
   return (
     <PageLayout 
