@@ -22,7 +22,7 @@ export default function SobreNosotros() {
             agradecemos el que te des el tiempo de leer nuestro blog.</p>
 
             <p>Somos un par de sujetos que un día fueron unidos por el destino, lo que 
-            dio pie a una buena amistad que tuvo como fruto este proyecto llamado 'Nobody Care'. 
+            dio pie a una buena amistad que tuvo como fruto este proyecto llamado Nobody Care. 
             Nuestro objetivo no es más que compartir nuestras opiniones sobre temas de nuestro 
             interés, venir y platicar sobre temas que a la mayoría no le interesa hablar con nosotros.</p>
 
