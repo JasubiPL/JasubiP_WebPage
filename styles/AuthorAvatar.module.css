@@ -5,7 +5,9 @@
   cursor: pointer;
 }
 .author_img{
-  background-color: blue;
+  background-image: url("/img/authors/default-icon.png");
+  background-size: 100%;
+  background-position: center;
   aspect-ratio: 1/1;
   display: flex;
   border-radius: 50px;

@@ -4,8 +4,9 @@ import Link from 'next/link'
 export default function Nav(){
   return(
     <nav className={styles.nav}>
-      <Link href='/'>
-        <h2 className={styles.nav_title}>Nobody Cares </h2>
+      <Link className={styles.nav_title_container} href='/'>
+        <img src='/img/logo.png' alt='logo icon' />
+        <h2 className={styles.nav_title}><span>NOBODY</span>CARES </h2>
       </Link>
       <ul className={styles.menu}>
         <li className={styles.menu_item}>

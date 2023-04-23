@@ -1,12 +1,11 @@
 :root{
-  --principal-color: #234fb0;
-  --principal-colore: rgb(35, 79, 176);
+  --principal-color: #2E56B2;
   --black-color:#101010;
-  --grey-color:#222;
-  --logo-title: 'Josefin Slab', serif;
+  --grey-color:#3b3b3b;
+  --logo-title: 'Poppins', sans-serif;
   --titles: 'Roboto Mono', monospace;
 }
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Roboto+Mono:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@100&display=swap');
 
 *{
   margin: 0;
@@ -17,12 +16,15 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body{
-  background-image: url(/img/background.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #2E56B2 0%, #2E56B2 5%, #fff  45%,#fff 60%,#2E56B2 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
 
 h1, h2, h3{
   font-family: var(--titles);
+}
+
+span{
+  font-family: var(--logo-title);
 }

@@ -1,22 +1,26 @@
 .footer{
   margin-top: 100px;
   width: 100%;
-  background-color: var(--black-color);
+  background-color: #fff;
   padding: 20px 0px;
   display: grid;
   place-content: center;
 }
 
 .footer_center{
-  color: #fff;
+  color: var(--grey-color);
   font-family: var(--titles);
   display: flex;
   align-items: center;
   gap: 10px;
+  font-weight: 600;
 }
 
 .footer_center img{
   width: 100px;
+  background-color: var(--principal-color);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 @media screen and (max-width:480px) {

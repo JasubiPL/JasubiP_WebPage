@@ -34,7 +34,7 @@ export default function SobreNosotros() {
         </section>
         <section className={styles.cards_container}>
           <h2 className={styles.cards_container_title}>Conoce al equipo</h2>
-          <article className={styles.card}>
+          <article className={`${styles.card} ${styles.card1}`}>
             <img loading='lazy' src='/img/authors/jasubi.jpg' lat='Autor Jasubi' />
             <h3>Jasubi Piñeyro</h3>
             <p>Autor y Desarrollador del sitio</p>
@@ -48,7 +48,7 @@ export default function SobreNosotros() {
               <a href='https://www.linkedin.com/in/jasubip/' target='_blank'><AiFillLinkedin /></a>
             </div>
           </article>
-          <article className={styles.card}>
+          <article className={`${styles.card} ${styles.card2}`}>
             <img loading='lazy' src='/img/authors/erik.jpeg' lat='Autor Jasubi' />
             <h3>Erik Guzmán</h3>
             <p>Autor</p>
