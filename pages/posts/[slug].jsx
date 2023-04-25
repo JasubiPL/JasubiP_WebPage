@@ -1,13 +1,29 @@
 import { getFiles, getFilesBySlug } from '@/lib/mdx';
 import { FcClapperboard, FcElectronics, FcRating  } from 'react-icons/fc'
+import {StickyShareButtons} from 'sharethis-reactjs';
 import styles from '@/styles/Post.module.css'
 import PageLayout from '@/components/PageLayout';
 import { MDXRemote } from 'next-mdx-remote';
 import AuthorAvatar from '@/components/AuthorAvatar';
+import Head from 'next/head';
 
 export default function Post({ source, frontmatter }) {
   return (
     <PageLayout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords}>
+      <StickyShareButtons
+        config={{
+          color:'white',
+          enabled: 'true',
+          labels: 'cta',
+          language: 'es',
+          networks: [
+            'facebook',
+            'twitter',
+            'linkedin',
+            'github',
+          ]
+        }}
+      />
       <section className={styles.post_header}>
         <div className={styles.post_header_center}>
           <img src={frontmatter.wallpaper} alt={frontmatter.alt}/>

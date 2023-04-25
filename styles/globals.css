@@ -2,8 +2,7 @@
   --principal-color: #2E56B2;
   --principal-color-opacity: rgba(46, 86, 178, .2);
   --grey-color:#3b3b3b;
-  --logo-title: 'Poppins', sans-serif;
-  --titles: 'Roboto Mono', monospace;
+  --titles: 'Poppins', sans-serif;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@100&display=swap');
 
@@ -16,10 +15,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3{
+h1, h2, h3, span{
   font-family: var(--titles);
-}
-
-span{
-  font-family: var(--logo-title);
+  font-weight: 100;
 }

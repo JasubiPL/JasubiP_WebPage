@@ -30,6 +30,7 @@ export default function PageLayout({
       
       {/* Estilos CSS y otros recursos */}
       <link rel="icon" href="/img/icon.jpg" />
+
     </Head>
     <header>
       <Nav></Nav>

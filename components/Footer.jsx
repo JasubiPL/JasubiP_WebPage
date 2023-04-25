@@ -1,7 +1,8 @@
 import styles from '@/styles/Footer.module.css'
+import Link from 'next/link'
 import { FaFacebookF } from 'react-icons/fa'
 import { BsTwitter } from 'react-icons/bs'
-import Link from 'next/link'
+import { AiFillInstagram } from 'react-icons/ai'
 
 export default function Footer(){
   return(
@@ -22,6 +23,7 @@ export default function Footer(){
         <li>
           <a href='https://www.facebook.com/profile.php?id=100092340722303' target='_blank'><FaFacebookF /></a>
           <a href='https://twitter.com/NobodyCaresOffi' target='_blank'><BsTwitter /></a>
+          <a href='https://www.instagram.com/nobodycaresoffi/' target='_blank'><AiFillInstagram /></a>
         </li>
       </ul>
     </footer>
