@@ -115,6 +115,10 @@
   .cards_container_title{
     margin: 10px;
   }
+
+  .card1:hover, .card2:hover{
+    transform: none;
+  }
   
 }
 

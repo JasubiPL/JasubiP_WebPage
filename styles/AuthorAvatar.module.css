@@ -25,6 +25,11 @@
   font-weight: bolder;
 }
 
+.author_name_blue{
+  color: var(--principal-color);
+  font-weight: bolder;
+}
+
 @media screen and (max-width:540px) {
   .author_name{
     font-size: 12px;

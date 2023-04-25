@@ -51,7 +51,7 @@
 
 .slide_content a{
   color: #fff;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: var(--principal-color);
   backdrop-filter: blur(3px);
   width: fit-content;
   padding: 10px 30px;
@@ -80,7 +80,8 @@
 
 ._blog_container_title{
   width: 100%;
-  color: var(--principal-color);
+  color: var(--grey-color);
+  font-size: 36px;
 }
 
 .post_item{
@@ -109,7 +110,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(59, 59, 59, .5);
   backdrop-filter: blur(5px);
   padding: 10px;
   display: flex;

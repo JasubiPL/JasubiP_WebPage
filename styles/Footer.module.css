@@ -55,5 +55,18 @@
 
   .footer_center{
     font-size: 12px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer_center li a svg{
+    font-size: 20px;
+  }
+
+  .footer{
+    padding: 30px 0px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
   }
 }

@@ -61,6 +61,7 @@ export default function Home({ posts }) {
                   width='30px'
                   height='30px'
                   authorName={post.author}
+                  color='white'
                   />
                 </div>
                 <h3 className={styles.post_item_title}>{post.title}</h3>
