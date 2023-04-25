@@ -1,17 +1,21 @@
-import { getFiles, getFilesBySlug } from '@/lib/mdx';
-import { FcClapperboard, FcElectronics, FcRating  } from 'react-icons/fc'
-import {StickyShareButtons} from 'sharethis-reactjs';
 import styles from '@/styles/Post.module.css'
 import PageLayout from '@/components/PageLayout';
-import { MDXRemote } from 'next-mdx-remote';
 import AuthorAvatar from '@/components/AuthorAvatar';
-import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { getFiles, getFilesBySlug } from '@/lib/mdx';
+import { FcClapperboard, FcElectronics, FcRating, FcCommandLine } from 'react-icons/fc'
+import {StickyShareButtons} from 'sharethis-reactjs';
+import { MDXRemote } from 'next-mdx-remote';
 
 export default function Post({ source, frontmatter }) {
+  const router = useRouter();
+  //console.log(router)
+
   return (
-    <PageLayout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords}>
+    <PageLayout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords} canonical={`https://unaopinionmas.vercel.app${router.asPath}`}>
       <StickyShareButtons
         config={{
+          show_mobile: 'true',
           color:'white',
           enabled: 'true',
           labels: 'cta',
@@ -43,7 +47,8 @@ export default function Post({ source, frontmatter }) {
             {
               frontmatter.icon === 'Peliculas' ? <FcClapperboard /> :
               frontmatter.icon === 'Tecnologia' ? <FcElectronics /> : 
-              frontmatter.icon === 'Curiosidades' ? <FcRating /> : ""
+              frontmatter.icon === 'Curiosidades' ? <FcRating /> :
+              frontmatter.icon === 'Development' ? <FcCommandLine /> : ""
             }
           </span>
         </div>

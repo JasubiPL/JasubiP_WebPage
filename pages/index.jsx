@@ -2,7 +2,7 @@ import styles from '@/styles/Home.module.css'
 import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
-import { FcClapperboard, FcElectronics, FcRating  } from 'react-icons/fc'
+import { FcClapperboard, FcElectronics, FcRating, FcCommandLine  } from 'react-icons/fc'
 import { useEffect } from 'react';
 import { startSlider } from '@/lib/handleSlider';
 import AuthorAvatar from '@/components/AuthorAvatar';
@@ -71,7 +71,8 @@ export default function Home({ posts }) {
               {post.topic}
               {post.icon === 'Peliculas' ? <FcClapperboard /> :
               post.icon === 'Tecnologia' ? <FcElectronics /> : 
-              post.icon === 'Curiosidades' ? <FcRating /> : ""}</p>
+              post.icon === 'Curiosidades' ? <FcRating /> :
+              post.icon === 'Development' ? <FcCommandLine /> : ""}</p>
             <p className={styles.post_item_footer}>{post.date}</p>
           </li>
         ))}
