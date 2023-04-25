@@ -23,10 +23,10 @@ export default function PageLayout({
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonical} />
       
-      {/*  Etiquetas meta para redes sociales */}
+      {/*  Etiquetas meta para redes sociales 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content="website" />*/}
       
       {/* Estilos CSS y otros recursos */}
       <link rel="icon" href="/img/icon.jpg" />
