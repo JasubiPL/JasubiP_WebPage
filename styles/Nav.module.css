@@ -5,12 +5,19 @@
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+  justify-content: center;
   gap: 10px;
   position: fixed;
   z-index: 9;
+}
+
+.nav_center{
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
 }
 
 .nav_title_container{
@@ -38,27 +45,26 @@
   color: var(--principal-color);
 }
 
-.menu{
-  height: 100%;
+.social_network_container{
   display: flex;
+  gap: 10px;
 }
 
-.menu_item a{
-  color: #000;
-  font-size: 24px;
-  transition: all .2s;
+.social_network_container a{
+  font-size: 20px;
+  color: #011931;
+  transition: .2s;
+  opacity: .3;
 }
-.menu_item a:hover{
+
+.social_network_container a:hover{
   color: var(--principal-color);
+  opacity: 1;
 }
 
 
 @media screen and (max-width:480px) {
   .nav_title{
-    font-size: 18px;
-  }
-  .menu_item a{
-    color: #fff;
     font-size: 18px;
   }
 }

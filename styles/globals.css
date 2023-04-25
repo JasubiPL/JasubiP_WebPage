@@ -1,5 +1,6 @@
 :root{
   --principal-color: #2E56B2;
+  --principal-color-opacity: rgba(46, 86, 178, .2);
   --black-color:#101010;
   --grey-color:#3b3b3b;
   --logo-title: 'Poppins', sans-serif;
@@ -14,11 +15,6 @@
   list-style: none;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-}
-body{
-  background: #d6249f;
-  background: radial-gradient(circle at 30% 107%, #2E56B2 0%, #2E56B2 5%, #fff  45%,#fff 60%,#2E56B2 90%);
-  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
 
 h1, h2, h3{
