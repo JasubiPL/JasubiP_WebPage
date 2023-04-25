@@ -8,7 +8,8 @@ export default function PageLayout({
   title = `Nobody Cares`, 
   canonical,
   description,
-  keywords}){
+  keywords,
+  shareImage,}){
   return(
     <>
     <Head>
@@ -22,11 +23,15 @@ export default function PageLayout({
       <meta name="author" content="Jasubi Piñeyro - JasubiP" />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonical} />
-      
-      {/*  Etiquetas meta para redes sociales 
+
+      {/* Twitter Card data */}
+      <meta name="twitter:card" value="summary" />
+
+      {/*  Etiquetas meta para redes sociales */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />*/}
+      <meta property="og:type" content="article" />
+      <meta property="og:image" content={shareImage} />
       
       {/* Estilos CSS y otros recursos */}
       <link rel="icon" href="/img/icon.jpg" />

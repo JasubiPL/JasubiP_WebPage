@@ -12,7 +12,12 @@ export default function Post({ source, frontmatter }) {
   //console.log(router)
 
   return (
-    <PageLayout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords} canonical={`https://unaopinionmas.vercel.app${router.asPath}`}>
+    <PageLayout 
+      title={frontmatter.title} 
+      description={frontmatter.description} 
+      keywords={frontmatter.keywords} 
+      canonical={`https://unaopinionmas.vercel.app${router.asPath}`}
+      shareImage={frontmatter.wallpaper}>
       <StickyShareButtons
         config={{
           show_mobile: 'true',
