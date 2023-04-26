@@ -11,7 +11,7 @@ import AuthorAvatar from '@/components/AuthorAvatar';
 
 export default function Home({ posts }) {
   posts.sort((a, b) =>( a.id > b.id) ? -1 : 1);
-  let lastPosts = posts.slice(0, 2);
+  let lastPosts = posts.slice(0, 4);
   useEffect(() => startSlider());
 
   return (
@@ -50,7 +50,7 @@ export default function Home({ posts }) {
         ))}
       </section>
       <section className={styles.post_blog_container}>
-        <h2 className={styles._blog_container_title}>Ultimos Post</h2>
+        <h2 className={styles._blog_container_title}>Últimos artículos</h2>
         {posts.map(post => (
           <li key={post.slug} className={styles.post_item}>
             <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
