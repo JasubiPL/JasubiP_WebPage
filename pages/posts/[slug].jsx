@@ -4,6 +4,7 @@ import AuthorAvatar from '@/components/AuthorAvatar';
 import { useRouter } from 'next/router';
 import { getFiles, getFilesBySlug } from '@/lib/mdx';
 import { FcClapperboard, FcElectronics, FcRating, FcCommandLine } from 'react-icons/fc'
+import { RiGameFill  } from 'react-icons/ri'
 import {StickyShareButtons} from 'sharethis-reactjs';
 import { MDXRemote } from 'next-mdx-remote';
 
@@ -41,7 +42,6 @@ export default function Post({ source, frontmatter }) {
       <section className={styles.post_source}>
         <div className={styles.post_source_center}>
           <AuthorAvatar
-            img={frontmatter.img}
             authorName={frontmatter.author}
             width='50px'
             height='50px'
@@ -53,7 +53,8 @@ export default function Post({ source, frontmatter }) {
               frontmatter.icon === 'Peliculas' ? <FcClapperboard /> :
               frontmatter.icon === 'Tecnologia' ? <FcElectronics /> : 
               frontmatter.icon === 'Curiosidades' ? <FcRating /> :
-              frontmatter.icon === 'Development' ? <FcCommandLine /> : ""
+              frontmatter.icon === 'Development' ? <FcCommandLine /> : 
+              frontmatter.icon === "Gaming" ? <RiGameFill color='#ff8f00'/> :""
             }
           </span>
         </div>

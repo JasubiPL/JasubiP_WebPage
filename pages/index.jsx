@@ -3,6 +3,7 @@ import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
 import { FcClapperboard, FcElectronics, FcRating, FcCommandLine  } from 'react-icons/fc'
+import { RiGameFill  } from 'react-icons/ri'
 import { useEffect } from 'react';
 import { startSlider } from '@/lib/handleSlider';
 import AuthorAvatar from '@/components/AuthorAvatar';
@@ -72,7 +73,8 @@ export default function Home({ posts }) {
               {post.icon === 'Peliculas' ? <FcClapperboard /> :
               post.icon === 'Tecnologia' ? <FcElectronics /> : 
               post.icon === 'Curiosidades' ? <FcRating /> :
-              post.icon === 'Development' ? <FcCommandLine /> : ""}</p>
+              post.icon === 'Development' ? <FcCommandLine /> :
+              post.icon === "Gaming" ? <RiGameFill color='#ff8f00'/> :"" }</p>
             <p className={styles.post_item_footer}>{post.date}</p>
           </li>
         ))}

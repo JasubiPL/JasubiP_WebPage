@@ -6,7 +6,9 @@ export default function AuthorAvatar({ authorName, width, height,color}) {
     return (
       <div className={styles.author}>
         <span className={styles.author_img}>
-          <img src={authorName === 'JasubiP' ? '/img/authors/jasubi.jpg' : '/img/authors/erik.jpeg'}
+          <img src={authorName === 'JasubiP' ? '/img/authors/jasubi.jpg' :
+              authorName === 'Erik Guzmán' ? '/img/authors/erik.jpeg' :
+              authorName === 'Gabojin360' ? '/img/authors/gabojin360.jpg' : '/img/authors/default-icon.jpeg'}
             width={width} 
             height={height} 
             loading="lazy" 
@@ -22,7 +24,10 @@ export default function AuthorAvatar({ authorName, width, height,color}) {
   return (
     <div className={styles.author}>
       <span className={styles.author_img}>
-        <img src={authorName === 'JasubiP' ? '/img/authors/jasubi.jpg' : '/img/authors/erik.jpeg'}
+        <img 
+          src={authorName === 'JasubiP' ? '/img/authors/jasubi.jpg' :
+          authorName === 'Erick Guzmán' ? '/img/authors/erik.jpg' :
+          authorName === 'Gabojin360' ? '/img/authors/gabojin360.jpg' : '/img/authors/default-icon.jpeg'}
           width={width} 
           height={height} 
           loading="lazy" 
