@@ -37,7 +37,7 @@ export default function SobreNosotros() {
           <article className={`${styles.card} ${styles.card1}`}>
             <img loading='lazy' src='/img/authors/jasubi.jpg' lat='Autor Jasubi' />
             <h3>Jasubi Piñeyro</h3>
-            <p>Autor y Desarrollador del sitio</p>
+            <p>CEO, Autor y Desarrollador</p>
             <p className={styles.card_description}>
             ¡Que tal! Soy desarrollador de software especializado en tecnologías web. Soy
              medio geek y me encantan diversos temas como diseño, tecnología, filosofía y 
@@ -63,6 +63,16 @@ export default function SobreNosotros() {
               <a href='https://www.linkedin.com/in/erik-guzman-projectmanager/' target='_blank'><AiFillLinkedin /></a>
             </div>
           </article>
+        </section>
+        <section className={styles.colaborations}>
+          <h2 className={styles.colaborations_title}>Colaboraciones</h2>
+          <ul className={styles.colaborations_center}>
+            <li>
+              <a href="https://www.facebook.com/search/top?q=gabojin3609" target="_blank">
+                <img src="/img/authors/gabojin360.jpg" alt="" />
+              </a>
+            </li>
+          </ul>
         </section>
       </section>
     </PageLayout>

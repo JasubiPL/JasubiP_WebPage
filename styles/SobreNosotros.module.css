@@ -96,6 +96,35 @@
   transform: scale(1.2);
 }
 
+.colaborations{
+  background-color: #f2f2f2;
+  width: 100vw;
+  margin-top: 50px;
+  padding: 50px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.colaborations_title{
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+  color: var(--principal-color);
+  margin-bottom:50px;
+  font-size: 50px;
+}
+
+.colaborations_center{
+  max-width: 80%;
+}
+
+.colaborations_center li a img{
+  height: 250px;
+  border-radius: 50%;
+}
+
+
 @media screen and (max-width:820px) {
   .description{
     padding: 60px 20px 20px 20px;
@@ -131,5 +160,9 @@
     font-size: 16px;
     line-height: 1.5;
     margin: 20px 0px;
+  }
+
+  .colaborations_title{
+    font-size: 36px;
   }
 }
