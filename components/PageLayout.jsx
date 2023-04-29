@@ -27,7 +27,7 @@ export default function PageLayout({
 
       {/* Twitter Card data */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:image" content={`https://unaopinionmas.vercel.app/${shareImage}`} />
+      <meta property="twitter:image" content={`https://unaopinionmas.vercel.app${shareImage}`} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
 
