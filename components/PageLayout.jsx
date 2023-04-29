@@ -23,15 +23,20 @@ export default function PageLayout({
       <meta name="author" content="Jasubi Piñeyro - JasubiP" />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonical} />
+      <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Mi blog RSS feed" />
 
       {/* Twitter Card data */}
-      <meta name="twitter:card" value="summary" />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:image" content={`https://unaopinionmas.vercel.app/${shareImage}`} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
 
       {/*  Etiquetas meta para redes sociales */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="article" />
-      <meta property="og:image" content={shareImage} />
+      <meta property="og:image" content={`https://unaopinionmas.vercel.app/${shareImage}`} />
+      <meta property="og:url" content={canonical}></meta>
       
       {/* Estilos CSS y otros recursos */}
       <link rel="icon" href="/img/icon.jpg" />
