@@ -30,7 +30,7 @@ export default function Post({ source, frontmatter }) {
             'facebook',
             'twitter',
             'linkedin',
-            'github',
+            'whatsapp',
           ]
         }}
       />
