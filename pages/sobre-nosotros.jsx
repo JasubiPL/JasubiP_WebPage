@@ -18,10 +18,10 @@ export default function SobreNosotros() {
           <div className={styles.description_center}>
             <h2>Todo el mundo tiene algo que contar...</h2>
             <p>
-            ¡Que tal! Somos Jasubi y Erik los autores de este sito y de antemano te 
-            agradecemos el que te des el tiempo de leer nuestro blog.</p>
+            ¡Que tal! Soy Jasubi el desarrollador y CEO de este sito y de antemano te 
+            agradesco el que te des el tiempo de leer este blog.</p>
 
-            <p>Somos un par de sujetos que un día fueron unidos por el destino, lo que 
+            <p>Somos un grupo de sujetos que un día fueron unidos por el destino, lo que 
             dio pie a una buena amistad que tuvo como fruto este proyecto llamado Nobody Care. 
             Nuestro objetivo no es más que compartir nuestras opiniones sobre temas de nuestro 
             interés, venir y platicar sobre temas que a la mayoría no le interesa hablar con nosotros.</p>
@@ -33,16 +33,10 @@ export default function SobreNosotros() {
           </div>
         </section>
         <section className={styles.cards_container}>
-          <h2 className={styles.cards_container_title}>Conoce al equipo</h2>
+          <h2 className={styles.cards_container_title}>Autores</h2>
           <article className={`${styles.card} ${styles.card1}`}>
             <img loading='lazy' src='/img/authors/jasubi.jpg' lat='Autor Jasubi' />
             <h3>Jasubi Piñeyro</h3>
-            <p>CEO, Autor y Desarrollador</p>
-            <p className={styles.card_description}>
-            ¡Que tal! Soy desarrollador de software especializado en tecnologías web. Soy
-             medio geek y me encantan diversos temas como diseño, tecnología, filosofía y 
-            fitness.
-            </p>
             <div className={styles.socialnetwork}>
               <a href='https://twitter.com/JasubiP' target='_blank'><BsTwitter /></a>
               <a href='https://www.linkedin.com/in/jasubip/' target='_blank'><AiFillLinkedin /></a>
@@ -51,13 +45,6 @@ export default function SobreNosotros() {
           <article className={`${styles.card} ${styles.card2}`}>
             <img loading='lazy' src='/img/authors/erik.jpeg' lat='Autor Jasubi' />
             <h3>Erik Guzmán</h3>
-            <p>Autor</p>
-            <p className={styles.card_description}>
-            Hola! Soy un comunicólogo extrovertido de 29 años, nacido y criado en la ciudad 
-            de México. Soy content manager y project management.
-            Soy de los que piensan antes de actuar. Aunque eso no significa que no me 
-            divierta en cada actividad que emprendo, ¡al contrario!
-            </p>
             <div className={styles.socialnetwork}>
               <a href='https://twitter.com/Gatoverik' target='_blank'><BsTwitter /></a>
               <a href='https://www.linkedin.com/in/erik-guzman-projectmanager/' target='_blank'><AiFillLinkedin /></a>

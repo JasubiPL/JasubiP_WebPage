@@ -39,55 +39,47 @@
   width: 100%;
   max-width: 1024px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr) ;
   place-items: center;
+  gap: 30px;
 }
 
 .cards_container_title{
-  grid-column: span 2;
+  grid-column: span 3;
   margin: 40px 0px;
   color: var(--principal-color);
   font-size: 32px;
 }
 
 .card img{
-  width: 25%;
+  width: 30%;
   border-radius: 50px;
   align-items: center;
 }
 
 .card{
-  background-color: rgba(46, 86, 178, .8  );
-  border-radius: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
   padding: 20px;
-  max-width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   text-align: center;
   align-items: center;
-  color: #fff;
+  color: var(--principal-color);
   transition: .5s;
-  cursor: pointer;
+  box-shadow: 0px 3px 20px -6px rgba(46,86,178,0.57);
+  -webkit-box-shadow: 0px 3px 20px -6px rgba(46,86,178,0.57);
+  -moz-box-shadow: 0px 3px 20px -6px rgba(46,86,178,0.57);
 }
-
-.card1:hover{
-  transform: scale(1.5) translateX(50%);
-  background-color: var(--principal-color);
-}
-
-.card2:hover{
-  transform: scale(1.5) translateX(-50%);
-  background-color: var(--principal-color);
-}
-
 .socialnetwork{
   display: flex;
   gap: 20px;
 }
 
 .socialnetwork a{
-  color: #fff;
+  color: var(--principal-color);
   font-size: 25px;
   transition: .2s;
 }
@@ -140,14 +132,6 @@
   .card p {
     font-size: 14px;
   }
-
-  .cards_container_title{
-    margin: 10px;
-  }
-
-  .card1:hover, .card2:hover{
-    transform: none;
-  }
   
 }
 
@@ -163,6 +147,7 @@
   }
 
   .colaborations_title{
-    font-size: 36px;
+    font-size: 32px;
   }
+
 }
