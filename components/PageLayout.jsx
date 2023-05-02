@@ -15,17 +15,21 @@ export default function PageLayout({
     <Head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta content="IE=8; IE=9; IE=10; IE=11" http-equiv="X-UA-Compatible" />
       
       {/*  Etiquetas meta para SEO */}
       <title>{`${title} | Nobody Cares`}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Jasubi Piñeyro - JasubiP" />
-      <meta name="robots" content="index, follow" />
+      <meta name="language" content="Español" />
+      <meta name="robots" content="index,follow" />
       <link rel="canonical" href={canonical} />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Mi blog RSS feed" />
+      <meta property="og:type" content="website" />
 
       {/* Twitter Card data */}
+      <meta name="twitter:site" content="@NobodyCaresOffi" />
+      <meta name="twitter:creator" content="@NobodyCaresOffi" />
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:image" content={`https://unaopinionmas.vercel.app${shareImage}`} />
       <meta property="twitter:title" content={title} />
@@ -36,7 +40,9 @@ export default function PageLayout({
       <meta property="og:description" content={description} />
       <meta property="og:type" content="article" />
       <meta property="og:image" content={`https://unaopinionmas.vercel.app/${shareImage}`} />
-      <meta property="og:url" content={canonical}></meta>
+      <meta property="og:url" content="https://unaopinionmas.vercel.app/" />
+      <meta property="og:site_name" content="Nobody Cares " />
+      <meta property="og:locale" content="es_ES" />
       
       {/* Estilos CSS y otros recursos */}
       <link rel="icon" href="/img/icon.jpg" />
