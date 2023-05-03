@@ -17,7 +17,7 @@ export default function Nav(){
           <a href='https://www.facebook.com/profile.php?id=100092340722303' target='_blank'><FaFacebookF /></a>
           <a href='https://twitter.com/NobodyCaresOffi' target='_blank'><BsTwitter /></a>
           <a href='https://www.instagram.com/nobodycaresoffi/' target='_blank'><AiFillInstagram /></a>
-          <Link href='/login'>Acceder</Link>
+          {/* <Link href='/login'>Acceder</Link> */}
         </div>
       </section>
     </nav>
