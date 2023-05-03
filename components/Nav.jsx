@@ -1,6 +1,5 @@
 import styles from '@/styles/Nav.module.css'
 import Link from 'next/link'
-import LoginArea from './LoginArea'
 import { FaFacebookF } from 'react-icons/fa'
 import { BsTwitter } from 'react-icons/bs'
 import { AiFillInstagram } from 'react-icons/ai'
@@ -18,7 +17,7 @@ export default function Nav(){
           <a href='https://www.facebook.com/profile.php?id=100092340722303' target='_blank'><FaFacebookF /></a>
           <a href='https://twitter.com/NobodyCaresOffi' target='_blank'><BsTwitter /></a>
           <a href='https://www.instagram.com/nobodycaresoffi/' target='_blank'><AiFillInstagram /></a>
-          <LoginArea login={login}/>
+          <Link href='/login'>Acceder</Link>
         </div>
       </section>
     </nav>
