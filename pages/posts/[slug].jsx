@@ -10,7 +10,6 @@ import { MDXRemote } from 'next-mdx-remote';
 
 export default function Post({ source, frontmatter }) {
   const router = useRouter();
-  //console.log(router)
 
   return (
     <PageLayout 
