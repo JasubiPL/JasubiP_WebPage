@@ -11,8 +11,9 @@ import AuthorAvatar from '@/components/AuthorAvatar';
 
 
 export default function Home({ posts }) {
-  posts.sort((a, b) =>( a.id > b.id) ? -1 : 1);
+  posts.sort((a, b) => parseInt(a.id) > parseInt(b.id) ? -1 : 1);
   let lastPosts = posts.slice(0, 4);
+  console.log(posts)
   useEffect(() => startSlider());
 
   return (
