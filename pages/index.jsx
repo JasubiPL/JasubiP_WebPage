@@ -2,11 +2,10 @@ import styles from '@/styles/Home.module.css'
 import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
-import { FcClapperboard, FcElectronics, FcRating, FcCommandLine, FcDecision  } from 'react-icons/fc'
-import { RiGameFill  } from 'react-icons/ri'
 import { useEffect, useState } from 'react';
 import { startSlider } from '@/lib/handleSlider';
 import AuthorAvatar from '@/components/AuthorAvatar';
+import Topic from '@/components/Topic';
 
 
 
@@ -73,10 +72,10 @@ export default function Home({ posts }) {
             <label htmlFor="Temas">Temas</label>
             <select id='Temas' onChange={() => setFilter(event.target.value)}>
               <option className={styles.filter_option} value="All">Todo</option>
-              <option value="Reseña">Reseñas</option>
+              <option value="Cine">Cine</option>
               <option value="Tecnologia">Tecnologia</option>
               <option value="Curiosidades">Curiosidades</option>
-              <option value="Desarrollo de Software">Desarrollo</option>
+              <option value="Desarrollo de Software">Programación</option>
               <option value="Reflexión">Reflexión</option>
               <option value="Gaming">Gaming</option>
             </select>
@@ -99,13 +98,8 @@ export default function Home({ posts }) {
               </div>
             </Link>
             <p className={styles.post_item_footer}>
-              {post.topic}
-              {post.icon === 'Peliculas' ? <FcClapperboard /> :
-              post.icon === 'Tecnologia' ? <FcElectronics /> : 
-              post.icon === 'Curiosidades' ? <FcRating /> :
-              post.icon === 'Development' ? <FcCommandLine /> :
-              post.icon === 'Reflection' ? <FcDecision /> :
-              post.icon === "Gaming" ? <RiGameFill color='#ff8f00'/> :"" }</p>
+              <Topic topic={post.topic} icon={post.icon} />
+            </p>
             <p className={styles.post_item_footer}>{post.date}</p>
           </li>
         ))}

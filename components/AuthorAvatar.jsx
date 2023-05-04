@@ -1,4 +1,5 @@
 import styles from "@/styles/AuthorAvatar.module.css" 
+import Link from "next/link";
 
 export default function AuthorAvatar({ authorName, width, height,color}) {
   if(color === 'white'){

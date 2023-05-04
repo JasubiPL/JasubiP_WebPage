@@ -7,6 +7,7 @@ import { FcClapperboard, FcElectronics, FcRating, FcCommandLine, FcDecision } fr
 import { RiGameFill  } from 'react-icons/ri'
 import {StickyShareButtons} from 'sharethis-reactjs';
 import { MDXRemote } from 'next-mdx-remote';
+import Topic from '@/components/Topic';
 
 export default function Post({ source, frontmatter }) {
   const router = useRouter();
@@ -47,15 +48,7 @@ export default function Post({ source, frontmatter }) {
           />
           <small className={styles.post_source_date}>Publicado: {frontmatter.date}</small>
           <span className={styles.post_source_topic}>
-            {frontmatter.topic}
-            {
-              frontmatter.icon === 'Peliculas' ? <FcClapperboard /> :
-              frontmatter.icon === 'Tecnologia' ? <FcElectronics /> : 
-              frontmatter.icon === 'Curiosidades' ? <FcRating /> :
-              frontmatter.icon === 'Development' ? <FcCommandLine /> : 
-              frontmatter.icon === 'Reflection' ? <FcDecision /> :
-              frontmatter.icon === "Gaming" ? <RiGameFill color='#ff8f00'/> :""
-            }
+            <Topic topic={frontmatter.topic} icon={frontmatter.icon} />
           </span>
         </div>
       </section>
