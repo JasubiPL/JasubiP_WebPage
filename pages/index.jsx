@@ -4,17 +4,32 @@ import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
 import { FcClapperboard, FcElectronics, FcRating, FcCommandLine, FcDecision  } from 'react-icons/fc'
 import { RiGameFill  } from 'react-icons/ri'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { startSlider } from '@/lib/handleSlider';
 import AuthorAvatar from '@/components/AuthorAvatar';
 
 
 
 export default function Home({ posts }) {
+  useEffect(() => {startSlider()},[]);
+
   posts.sort((a, b) => parseInt(a.id) > parseInt(b.id) ? -1 : 1);
-  let lastPosts = posts.slice(0, 4);
-  console.log(posts)
-  useEffect(() => startSlider());
+  const lastPosts = posts
+  const allPosts = posts
+
+  //Categori filter
+  const [filter, setFilter] = useState("All")
+
+  const postFilter = (filter) => {
+    if (filter === 'All'){
+      return allPosts
+    }else{
+      return allPosts.filter(post => post.topic === filter)
+    }
+  }
+
+  const postFiltered = postFilter(filter)
+  
 
   return (
     <PageLayout 
@@ -38,7 +53,7 @@ export default function Home({ posts }) {
       canonical='https://unaopinionmas.vercel.app/'
     >
       <section className={styles.slider_container}>
-        {lastPosts.map(post =>(
+        {lastPosts.slice(0, 4).map(post =>(
           <article key={post.slug} className={`${styles.slide} slide` }>
             <img priority='true' src={post.wallpaper} alt={post.alt} />
             <div className={styles.slide_content}>
@@ -52,8 +67,22 @@ export default function Home({ posts }) {
         ))}
       </section>
       <section className={styles.post_blog_container}>
-        <h2 className={styles._blog_container_title}>Últimos artículos</h2>
-        {posts.map(post => (
+        <header className={styles.post_header}><
+          h2 className={styles._blog_container_title}>Últimos artículos</h2>
+          <div className={styles._blog_container_filter}>
+            <label htmlFor="Temas">Temas</label>
+            <select id='Temas' onChange={() => setFilter(event.target.value)}>
+              <option className={styles.filter_option} value="All">Todo</option>
+              <option value="Reseña">Reseñas</option>
+              <option value="Tecnologia">Tecnologia</option>
+              <option value="Curiosidades">Curiosidades</option>
+              <option value="Desarrollo de Software">Desarrollo</option>
+              <option value="Reflexión">Reflexión</option>
+              <option value="Gaming">Gaming</option>
+            </select>
+          </div>
+        </header>
+        {postFiltered.map(post => (
           <li key={post.slug} className={styles.post_item}>
             <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
               <img loading='lazy' layout='responsive' src={post.poster} alt={post.alt} />
