@@ -54,10 +54,17 @@
 }
 
 .social_network_container a{
+  display: flex;
+  align-items: center;
   font-size: 20px;
   color: #011931;
   transition: .2s;
   opacity: .3;
+}
+
+.nav_user{
+  color: var(--principal-color);
+  font-weight: bold;
 }
 
 .social_network_container a:hover{
