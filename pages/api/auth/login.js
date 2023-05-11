@@ -6,7 +6,7 @@ export default function loginhandler(req, res){
 
   if(email === 'admin@nobodycares.com' && password === '08181020' || email === 'test@nobodycares.com' && password === '123456' ){
     const token = jwt.sign({
-      exp: Math.floor(Date.now() / 1000) + 60 * 60 * 7,
+      exp: Math.floor(Date.now() / 1000) + 60 * 60,
       email: email,
       username:`${email === 'admin@nobodycares.com' ? 'Admin' : 'Test User'}`,
     }, 'secret')

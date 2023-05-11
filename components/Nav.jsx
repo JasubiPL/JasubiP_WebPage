@@ -5,6 +5,7 @@ import { BsTwitter } from 'react-icons/bs'
 import { AiFillInstagram } from 'react-icons/ai'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import User from './User'
 
 export default function Nav(){
   const[loginUser, setLoginUser] = useState(<Link href='/login'>Acceder</Link>)
@@ -14,7 +15,7 @@ export default function Nav(){
   const verifyUser = async () =>{
     const res = await axios.get('/api/profile')
     if(res.data.login){
-      setLoginUser(res.data.username)
+      setLoginUser(<User currentUser={res.data.username} />)
     }
   }
 
@@ -31,7 +32,7 @@ export default function Nav(){
           <a href='https://www.facebook.com/profile.php?id=100092340722303' target='_blank'><FaFacebookF /></a>
           <a href='https://twitter.com/NobodyCaresOffi' target='_blank'><BsTwitter /></a>
           <a href='https://www.instagram.com/nobodycaresoffi/' target='_blank'><AiFillInstagram /></a>
-          <span className={styles.nav_user}>{loginUser}</span>
+          {loginUser}
         </div>
       </section>
     </nav>

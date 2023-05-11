@@ -62,11 +62,6 @@
   opacity: .3;
 }
 
-.nav_user{
-  color: var(--principal-color);
-  font-weight: bold;
-}
-
 .social_network_container a:hover{
   color: var(--principal-color);
   opacity: 1;
