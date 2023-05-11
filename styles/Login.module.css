@@ -66,3 +66,8 @@
   background: none;
   font-size: 16px;
 }
+
+.login_error{
+  color: red;
+  font-weight: bold;
+}

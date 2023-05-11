@@ -1,14 +1,24 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import axios from "axios"
 import styles from "@/styles/Login.module.css" 
+import { useRouter } from "next/router"
 
 export default function Login(){
 
+  useEffect(() =>{verifyUser()},[])
+
   const [typeForm, setTypeForm] = useState("login")
+  const[errorLogin, setErrorLogin] = useState('')
   const [credentials, setCredentials] = useState({
     email:"",
     password:"",
   })
+  const router = useRouter()
+
+  const verifyUser = async () =>{
+    const res = await axios.get('/api/profile')
+    if(res.data.login)  router.push('/')
+  }
 
   const handleChange = (e) =>{
     setCredentials({
@@ -19,16 +29,25 @@ export default function Login(){
 
   const handleSubmitLogin = async (e) =>{
     e.preventDefault()
-    console.log(credentials);
+    //console.log(credentials);
     const response = await axios.post('/api/auth/login', credentials)
-    console.log(response)
-  }
+    //console.log(response)
 
-  const handleSubmitRegister = async (e) =>{
-    e.preventDefault()
-    console.log(credentials);
-    const response = await axios.post('/api/auth/login', credentials)
-    console.log(response)
+    if(response.status === 200 && response.data.login){
+      //console.log('login success')
+
+      const res = await axios.get('/api/profile')
+      //console.log(res.data)
+
+      if(res.data.username === 'Admin'){
+        router.push('/dashboard')
+      }else{
+        router.push('/')
+      }
+    }
+
+    setErrorLogin(response.data.err)
+
   }
 
   if(typeForm === 'login'){
@@ -41,6 +60,7 @@ export default function Login(){
           <input name='email' type='email' placeholder='email' onChange={handleChange}/>
           <label>Contraseña:</label>
           <input name='password' type='password' placeholder='password' onChange={handleChange}/>
+          <p className={styles.login_error}>{errorLogin}</p>
           <button>Acceder</button>
           <p>¡No tienes una cuenta! <button onClick={() =>setTypeForm('')}>Regístrate</button></p>
         </form>

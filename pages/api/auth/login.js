@@ -4,11 +4,11 @@ import {serialize} from "cookie"
 export default function loginhandler(req, res){
   const { email, password } = req.body
 
-  if(email === 'admin@admin.com' && password === 'admin'){
+  if(email === 'admin@nobodycares.com' && password === '08181020' || email === 'test@nobodycares.com' && password === '123456' ){
     const token = jwt.sign({
       exp: Math.floor(Date.now() / 1000) + 60 * 60 * 7,
-      email: 'admin@admin.com',
-      username:'admin',
+      email: email,
+      username:`${email === 'admin@nobodycares.com' ? 'Admin' : 'Test User'}`,
     }, 'secret')
 
     const serialized = serialize('nbcToken', token, {
@@ -20,9 +20,9 @@ export default function loginhandler(req, res){
     })
   
     res.setHeader('Set-Cookie', serialized)
-    return res.json('login success')
+    return res.json({message:'login success', login: true})
   }
 
-  return res.status(401).json({err: 'password invalido'})
+  return res.json({err: 'Usuario o contraseña invalida'})
 
 }
