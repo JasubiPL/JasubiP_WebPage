@@ -1,15 +1,21 @@
+"use client"
 import styles from '@/styles/dashboard/SetPost.module.css'
 import { useState } from 'react';
 
 export default function SetPost() {
+  const [imgPoster, setImgPoster] = useState()
+  const [imgWallaper, setImgWallpaper] = useState()
   const [data, setData] = useState({
     title: '',
     description: '',
     keywords: '',
     topic: '',
     author: '',
-    content:''
+    content:'',
+    poster:'',
+    wallpaper:''
   })
+
 
   
 
@@ -20,12 +26,48 @@ export default function SetPost() {
     })
     
   }
-  console.log(data)
+  //console.log(data)
+
+  const handlerSubmit = (e) =>{
+    e.preventDefault()
+
+    console.log(data)
+
+  }
+
+  const handlePoster = (e) => {
+    const previewFilePoster = e.target.files[0]
+    setData({
+      ...data,
+      [e.target.name]: previewFilePoster
+    })
+
+    const imgUrl = URL.createObjectURL(previewFilePoster)
+    //console.log( imgUrl)
+    setImgPoster(imgUrl)
+  }
+
+  const handleWallpaper = (e) => {
+    const previewFileWallpaper = e.target.files[0]
+    setData({
+      ...data,
+      [e.target.name]: previewFileWallpaper
+    })
+
+    const imgUrl = URL.createObjectURL(previewFileWallpaper)
+    //console.log( imgUrl)
+    setImgWallpaper(imgUrl)
+  }
+
+  //console.log(data)
 
   return (
     <section className={styles.set_post}>
-      <h2>Nuevo Artículo</h2>
-      <form>
+      <form onSubmit={handlerSubmit}>
+        <header className={styles.set_post_header}>
+          <h2>Nuevo Artículo</h2>
+          <button>Publicar</button>
+        </header>
         <label htmlFor="title">Nombre del Artículo</label>
         <input type="text" name='title' value={data.title} onChange={handlerChange}/>
 
@@ -60,11 +102,24 @@ export default function SetPost() {
         <textarea type="text" name='content' value={data.content} onChange={handlerChange}/>
 
         <div className={styles.update_image_container}>
-          <label htmlFor="poster">Palabras Clave</label>
-          <input type="file" name='poster' value={data.poster} onChange={handlerChange}/>
-          
-          <label htmlFor="wallpaper">Palabras Clave</label>
-          <input type="file" name='wallpaper' value={data.wallpaper} onChange={handlerChange}/>
+          <label htmlFor="poster">Imagen de Portada</label>
+          <div className={styles.custom_file_input}>
+            <input type="file" name='poster' onChange={(e) => handlePoster(e)}/>
+            <div className={styles.custom_button}>Subir Portada</div>
+          </div>
+          <dir className={styles.update_image_preview}>
+            <img src={imgPoster} />
+          </dir>
+        </div>
+        <div className={styles.update_image_container}>
+          <label htmlFor="wallpaper">Imagen de Cabecera</label>
+          <div className={styles.custom_file_input}>
+            <input type="file" name='wallpaper' onChange={(e) => handleWallpaper(e)}/>
+            <div className={styles.custom_button}>Subir Wallpaper</div>
+          </div>
+          <dir className={styles.update_image_preview}>
+            <img src={imgWallaper} />
+          </dir>
         </div>
         
       </form>

@@ -42,6 +42,7 @@ export default function Dashboard(){
           myPost:styles.inactive,
           favorites:styles.inactive,
         })
+        setSection(<SetPost />)
         break
       
       case 'my':
@@ -50,6 +51,7 @@ export default function Dashboard(){
           myPost:styles.active,
           favorites:styles.inactive,
         })
+        setSection('No disponible')
         break
 
       case 'favorites':
@@ -58,6 +60,7 @@ export default function Dashboard(){
           myPost:styles.inactive,
           favorites:styles.active,
         })
+        setSection('No disponible')
         break
     }
   }
