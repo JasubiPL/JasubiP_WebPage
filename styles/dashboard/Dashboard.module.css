@@ -3,7 +3,9 @@
   width: 100%;
   height: calc(100vh - 70px);
   padding-top: 55px;
+  animation: containerShow 2.5s;
 }
+
 .aside{
   width: 25%;
   height: 100%;
@@ -50,4 +52,16 @@
   padding: 10px;
   border-radius:5px;
   color: var(--principal-color);
+}
+
+@keyframes containerShow {
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

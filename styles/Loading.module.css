@@ -1,0 +1,25 @@
+.loading{
+  width:0%;
+  height: 0px;
+  background-color: var(--principal-color);
+  animation: showLoading 2s;
+  
+}
+
+@keyframes showLoading {
+  0%{
+    height: 10px;
+    margin-top: 52px;
+    width: 0%;
+  }
+  99%{
+    height: 10px;
+    margin-top: 52px;
+    width: 100%;
+    opacity: 1;
+  }
+  100%{
+    margin-top: 0;
+    opacity: 0;
+  }
+}

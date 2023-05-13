@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { MdPostAdd, MdFolderOpen, MdStarOutline } from "react-icons/md"
+import Loading from "@/components/Loading"
 import axios from "axios"
 import PageLayout from "@/components/PageLayout"
 import styles from '@/styles/dashboard/Dashboard.module.css'
@@ -67,6 +68,7 @@ export default function Dashboard(){
 
 return(
   <PageLayout title={`Dashboard ${currentUser.username}`}>
+    <Loading />
     <section className={styles.container}>
       <aside className={styles.aside}>
         <h2>Dashboard</h2>
