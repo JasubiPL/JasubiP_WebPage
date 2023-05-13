@@ -4,6 +4,7 @@
   place-content: center;
   background-color: #f2f2f2;
   padding: 20px;
+  animation: containerShow 2.5s;
 }
 
 .form{
@@ -70,4 +71,16 @@
 .login_error{
   color: red;
   font-weight: bold;
+}
+
+@keyframes containerShow {
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

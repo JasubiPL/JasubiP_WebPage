@@ -1,5 +1,6 @@
 "use client"
 import styles from '@/styles/dashboard/SetPost.module.css'
+import axios from 'axios';
 import { useState } from 'react';
 
 export default function SetPost() {
@@ -16,9 +17,6 @@ export default function SetPost() {
     wallpaper:''
   })
 
-
-  
-
   const handlerChange = (e) =>{
     setData({
       ...data,
@@ -28,10 +26,13 @@ export default function SetPost() {
   }
   //console.log(data)
 
-  const handlerSubmit = (e) =>{
+  const handlerSubmit = async (e) =>{
     e.preventDefault()
 
-    console.log(data)
+    const res = await axios.post('../../api/handlerPost/newPost', data)
+    console.log(res)
+
+    //console.log(data)
 
   }
 

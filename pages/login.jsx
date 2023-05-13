@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import styles from "@/styles/Login.module.css" 
 import { useRouter } from "next/router"
+import Loading from "@/components/Loading"
 
 export default function Login(){
 
