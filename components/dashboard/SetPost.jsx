@@ -6,6 +6,7 @@ import { useState } from 'react';
 export default function SetPost() {
   const [imgPoster, setImgPoster] = useState()
   const [imgWallaper, setImgWallpaper] = useState()
+  const [imagePost, setImagePost] = useState({poster:'', wallpaper:''})
   const [data, setData] = useState({
     title: '',
     description: '',
@@ -13,9 +14,10 @@ export default function SetPost() {
     topic: '',
     author: '',
     content:'',
-    poster: {},
+    poster: '',
     wallpaper:''
   })
+  console.log(data.poster)
 
   const handlerChange = (e) =>{
     setData({
@@ -24,41 +26,60 @@ export default function SetPost() {
     })
     
   }
-  console.log(data.poster)
 
   const handlerSubmit = async (e) =>{
     e.preventDefault()
-    console.log(data)
+    //console.log(data)
 
-    const res = await axios.post('../../api/handlerPost/newPost', data)
+    const form = new FormData()
+    form.append('poster',  imagePost.poster)
+    form.append('wallpaper',  imagePost.wallpaper)
+
+    //const res = await axios.get('http://localhost:3002/')
+    
+    const res = await axios.post('http://localhost:3002/', form)
+    const {pathImage} = res.data
+    console.log(pathImage)
+
+    setData({
+      ...data,
+      poster: pathImage.poster,
+      wallpaper: pathImage.wallpaper
+    })
+
+    if(res.status === 200) sendData()
+
+    
+  }
+
+  const sendData = async () =>{
+    console.log(data.poster)
+    const res = await axios.post('./api/upload/newPost', data)
     console.log(res)
   }
 
   const handlePoster = async (e) => {
-    const getPoster = e.target.files[0]
-
-    const poster = new FormData()
-    poster.set("poster", getPoster)
+    const poster = e.target.files[0]
     
-    setData({
-      ...data,
+    setImagePost({
+      ...imagePost,
       [e.target.name]: poster
     })
     
 
-    const imgUrl = URL.createObjectURL(getPoster)
+    const imgUrl = URL.createObjectURL(poster)
     //console.log( imgUrl)
     setImgPoster(imgUrl)
   }
 
   const handleWallpaper = (e) => {
-    const previewFileWallpaper = e.target.files[0]
-    setData({
-      ...data,
-      [e.target.name]: `/public/img/${data.topic}`
+    const wallpaper = e.target.files[0]
+    setImagePost({
+      ...imagePost,
+      [e.target.name]: wallpaper
     })
 
-    const imgUrl = URL.createObjectURL(previewFileWallpaper)
+    const imgUrl = URL.createObjectURL(wallpaper)
     //console.log( imgUrl)
     setImgWallpaper(imgUrl)
   }

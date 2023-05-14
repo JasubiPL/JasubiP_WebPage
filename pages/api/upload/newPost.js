@@ -1,9 +1,10 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-export default function handlerPost(req, res){
+
+export default async function handlerPost(req, res){
   const data = req.body
-  //console.log(data)
+  console.log(data)
 
   //build date
   const options = { day: 'numeric', month: 'long', year: 'numeric' };
@@ -30,8 +31,8 @@ title: '${data.title}'
 date: '${formattedDate}'
 description: '${data.description}'
 keywords: '${data.keywords}'
-poster: '${data.poster}'
-wallpaper: '/img/${data.topic}/amazone-fresh-wallpaper.webp'
+poster: 'http://localhost:3002/img/${data.poster}'
+wallpaper: 'http://localhost:3002/img/${data.wallpaper}'
 alt: '${data.title}'
 topic: '${data.topic}'
 icon: '${data.topic}'
