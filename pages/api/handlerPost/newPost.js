@@ -14,8 +14,7 @@ export default function handlerPost(req, res){
   const formattedDate = `${parts[0]}-${parts[1].charAt(0).toUpperCase() + parts[1].slice(1)}-${parts[2]}`;
   //console.log(formattedDate); // Ejemplo: "11-Mayo-2023"
 
-
-  
+  //build Path
   const savePath = path.join(process.cwd(), 'posts')
   //console.log(savePath)
   
@@ -31,7 +30,7 @@ title: '${data.title}'
 date: '${formattedDate}'
 description: '${data.description}'
 keywords: '${data.keywords}'
-poster: '/img/${data.topic}/amazone-fresh-poster.jpg'
+poster: '${data.poster}'
 wallpaper: '/img/${data.topic}/amazone-fresh-wallpaper.webp'
 alt: '${data.title}'
 topic: '${data.topic}'

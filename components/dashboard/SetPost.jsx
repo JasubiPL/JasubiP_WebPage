@@ -13,7 +13,7 @@ export default function SetPost() {
     topic: '',
     author: '',
     content:'',
-    poster:'',
+    poster: {},
     wallpaper:''
   })
 
@@ -24,26 +24,29 @@ export default function SetPost() {
     })
     
   }
-  //console.log(data)
+  console.log(data.poster)
 
   const handlerSubmit = async (e) =>{
     e.preventDefault()
+    console.log(data)
 
     const res = await axios.post('../../api/handlerPost/newPost', data)
     console.log(res)
-
-    //console.log(data)
-
   }
 
-  const handlePoster = (e) => {
-    const previewFilePoster = e.target.files[0]
+  const handlePoster = async (e) => {
+    const getPoster = e.target.files[0]
+
+    const poster = new FormData()
+    poster.set("poster", getPoster)
+    
     setData({
       ...data,
-      [e.target.name]: previewFilePoster
+      [e.target.name]: poster
     })
+    
 
-    const imgUrl = URL.createObjectURL(previewFilePoster)
+    const imgUrl = URL.createObjectURL(getPoster)
     //console.log( imgUrl)
     setImgPoster(imgUrl)
   }
@@ -52,7 +55,7 @@ export default function SetPost() {
     const previewFileWallpaper = e.target.files[0]
     setData({
       ...data,
-      [e.target.name]: previewFileWallpaper
+      [e.target.name]: `/public/img/${data.topic}`
     })
 
     const imgUrl = URL.createObjectURL(previewFileWallpaper)
