@@ -17,7 +17,6 @@ export default function SetPost() {
     poster: '',
     wallpaper:''
   })
-  console.log(data.poster)
 
   const handlerChange = (e) =>{
     setData({
@@ -34,10 +33,8 @@ export default function SetPost() {
     const form = new FormData()
     form.append('poster',  imagePost.poster)
     form.append('wallpaper',  imagePost.wallpaper)
-
-    //const res = await axios.get('http://localhost:3002/')
     
-    const res = await axios.post('http://localhost:3002/', form)
+    const res = await axios.post('https://server-una-opinion-mas-production.up.railway.app/', form)
     const {pathImage} = res.data
     console.log(pathImage)
 
