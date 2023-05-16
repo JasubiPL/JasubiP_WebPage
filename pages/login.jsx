@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import axios from "axios"
 import styles from "@/styles/Login.module.css" 
 import { useRouter } from "next/router"
 import Loading from "@/components/Loading"
+import { SessionContext } from "@/hooks/SessionContext"
 
 export default function Login(){
+  const { setSession, setToken} = useContext(SessionContext)
 
   useEffect(() =>{verifyUser()},[])
 
@@ -31,26 +33,21 @@ export default function Login(){
   const handleSubmitLogin = async (e) =>{
     e.preventDefault()
     //console.log(credentials);
-    const response = await axios.post('https://server-una-opinion-mas-production.up.railway.app/api/auth/login', credentials,{
+    const res = await axios.post('https://server-una-opinion-mas-production.up.railway.app/api/auth/login', credentials,{
     //const response = await axios.post('http://localhost:4000/api/auth/login', credentials, {
       withCredentials: true
     })
-    console.log(response)
+    console.log(res)
 
-    if(response.status === 200 && response.data.login){
-      //console.log('login success')
+    if(res.status === 200 && res.data.login){
 
-      const res = await axios.get('/api/profile')
-      //console.log(res.data)
+      setSession(true)
+      setToken(res.data.nbcAuth)
 
-      if(res.data.username === 'Admin'){
-        router.push('/dashboard')
-      }else{
-        router.push('/')
-      }
+      router.push('/')
     }
 
-    setErrorLogin(response.data.err)
+    setErrorLogin(res.data.err)
 
   }
 
