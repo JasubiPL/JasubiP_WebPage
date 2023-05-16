@@ -3,6 +3,8 @@ import {serialize} from "cookie"
 
 export default function loginhandler(req, res){
   const { email, password } = req.body
+  const data = req.body
+  console.log(data)
 
   if(email === 'admin@nobodycares.com' && password === '08181020' || email === 'test@nobodycares.com' && password === '123456' ){
     const token = jwt.sign({

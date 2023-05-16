@@ -30,9 +30,9 @@ export default function Login(){
 
   const handleSubmitLogin = async (e) =>{
     e.preventDefault()
-    //console.log(credentials);
-    const response = await axios.post('/api/auth/login', credentials)
-    //console.log(response)
+    console.log(credentials);
+    const response = await axios.post('http://localhost:4000/api/auth/login', credentials)
+    console.log(response)
 
     if(response.status === 200 && response.data.login){
       //console.log('login success')
