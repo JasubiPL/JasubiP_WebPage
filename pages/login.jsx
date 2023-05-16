@@ -30,8 +30,11 @@ export default function Login(){
 
   const handleSubmitLogin = async (e) =>{
     e.preventDefault()
-    console.log(credentials);
-    const response = await axios.post('http://localhost:4000/api/auth/login', credentials)
+    //console.log(credentials);
+    //const response = await axios.post('https://server-una-opinion-mas-production.up.railway.app/api/auth/login', credentials, {
+    const response = await axios.post('http://localhost:4000/api/auth/login', credentials, {
+      withCredentials: true
+    })
     console.log(response)
 
     if(response.status === 200 && response.data.login){

@@ -3,11 +3,11 @@ import { verify } from "jsonwebtoken"
 
 export default function logoutHandler(req, res){
 
-  const { nbcToken } = req.cookies
+  const { nbcAuth } = req.cookies
 
-  verify(nbcToken, 'secret')
+  verify(nbcAuth, 'nbc')
 
-  const serialized = serialize('nbcToken', null, {
+  const serialized = serialize('nbcAuth', null, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
