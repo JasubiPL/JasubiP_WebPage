@@ -10,19 +10,14 @@ import { SessionContext } from '@/hooks/SessionContext'
 
 export default function Nav(){
   const[loginUser, setLoginUser] = useState(<Link href='/login'>Acceder</Link>)
-  const { session, currentUser } = useContext(SessionContext)
+  const { session } = useContext(SessionContext)
 
-  useEffect(() => {verifyUser()},[])
-
-  const verifyUser = async () =>{
+  useEffect(() => {
     if(session){
-      console.log(currentUser, session)
-      setLoginUser(<User currentUser={currentUser.username} />)
+      setLoginUser(<User />)
     }
-  }
+  },[])
 
-
-  let login = false
   return(
     <nav className={styles.nav}>
       <section className={styles.nav_center}>

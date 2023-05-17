@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { MdPostAdd, MdFolderOpen, MdStarOutline } from "react-icons/md"
 import Loading from "@/components/Loading"
-import axios from "axios"
 import PageLayout from "@/components/PageLayout"
 import styles from '@/styles/dashboard/Dashboard.module.css'
 import SetPost from "@/components/dashboard/SetPost"
+import { SessionContext } from "@/hooks/SessionContext"
 
 export default function Dashboard(){
-  const [currentUser, setCurrentUser] = useState({username:''})
+  const { user } = useContext(SessionContext)
+
+  //Styles actyive section
   const [active, setActive] = useState({
     newPost:styles.active,
     myPost:styles.inactive,
@@ -18,21 +20,11 @@ export default function Dashboard(){
   const router = useRouter()
 
   useEffect(() =>{
-    verifyUser()
+    if(user[2] === 'standar' || user[2] === undefined) router.push("/") 
+  
   }, [])
 
-  const verifyUser = async () =>{
-    const response = await axios.get('/api/profile')
-    const user = response.data
-    //console.log(user)
 
-    if(response.status === 200 && user.username === 'Admin'){
-      setCurrentUser(user)
-      return
-    }else{
-      router.push("/")
-    }
-  }
 
   const handleSection = (section) => {
     //console.log(section)
@@ -67,7 +59,7 @@ export default function Dashboard(){
   }
 
 return(
-  <PageLayout title={`Dashboard ${currentUser.username}`}>
+  <PageLayout title={`Dashboard ${user[0]}`}>
     <Loading />
     <section className={styles.container}>
       <aside className={styles.aside}>

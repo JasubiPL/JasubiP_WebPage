@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import axios from "axios"
 import styles from "@/styles/Login.module.css" 
 import { useRouter } from "next/router"
 import Loading from "@/components/Loading"
+import { SessionContext } from "@/hooks/SessionContext"
 
 export default function Login(){
-
+  const { setUser, setSession } = useContext(SessionContext)
   useEffect(() =>{verifyUser()},[])
 
   const [typeForm, setTypeForm] = useState("login")
@@ -35,14 +36,13 @@ export default function Login(){
     //const response = await axios.post('http://localhost:4000/api/auth/login', credentials, {
       withCredentials: true
     })
-    //console.log(res)
+    const userData = res.data
 
-    if(res.status === 200 && res.data.login){
-
-      window.sessionStorage.setItem('sessionAuth', res.data.nbcAuth)
-      window.sessionStorage.setItem('login', true)
-      router.push('/')
-    }
+    setSession(userData.login)
+    setUser([userData.username, userData.email, userData.credentials])
+    window.sessionStorage.setItem('sessionAuth', userData.nbcAuth)
+  
+    router.push('/')
 
     setErrorLogin(res.data.err)
 

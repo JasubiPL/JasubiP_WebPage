@@ -5,40 +5,25 @@ export const SessionContext = createContext(null)
 
 export default function SessionProvider({ children }){
 
-  useEffect(() => {verifyUser()},[])
+  const [session, setSession] = useState(false)
+  const [user, setUser] = useState([])
+  const [token, setToken]  = useState('')
 
-  const verifyUser = async () =>{
-    const login = window.sessionStorage.getItem('login')
-    setSession(login)
-
+  useEffect(() => {
     const getToken = window.sessionStorage.getItem('sessionAuth')
     setToken(getToken)
+  },[])
 
-    console.log(getToken)
-
-    if(session){
-      const res = await axios.get('https://server-una-opinion-mas-production.up.railway.app/api/usersHandler/user',{
-        headers:{
-          'Authorization': `Bearer ${getToken}`
-        }
-      })
-
-      const userData = res.data
-      setCurrenUser(userData)
-      console.log(userData.username)
-    }
-  } 
-  
-  const [session, setSession] = useState(false)
-  const [currentUser, setCurrenUser] = useState()
-  const [token, setToken]  = useState()
+  console.log(token)
+  console.log(user)
+  console.log(session)
 
   return(
     <SessionContext.Provider value={{
       session,
       setSession,
-      currentUser,
-      setCurrenUser,
+      user,
+      setUser,
       token,
       setToken
     }}>
