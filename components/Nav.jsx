@@ -3,19 +3,21 @@ import Link from 'next/link'
 import { FaFacebookF } from 'react-icons/fa'
 import { BsTwitter } from 'react-icons/bs'
 import { AiFillInstagram } from 'react-icons/ai'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import User from './User'
+import { SessionContext } from '@/hooks/SessionContext'
 
 export default function Nav(){
   const[loginUser, setLoginUser] = useState(<Link href='/login'>Acceder</Link>)
+  const { session, currentUser } = useContext(SessionContext)
 
   useEffect(() => {verifyUser()},[])
 
   const verifyUser = async () =>{
-    const res = await axios.get('/api/profile')
-    if(res.data.login){
-      setLoginUser(<User currentUser={res.data.username} />)
+    if(session){
+      console.log(currentUser, session)
+      setLoginUser(<User currentUser={currentUser.username} />)
     }
   }
 

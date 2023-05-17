@@ -1,12 +1,10 @@
-import { useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import axios from "axios"
 import styles from "@/styles/Login.module.css" 
 import { useRouter } from "next/router"
 import Loading from "@/components/Loading"
-import { SessionContext } from "@/hooks/SessionContext"
 
 export default function Login(){
-  const { setSession, setToken} = useContext(SessionContext)
 
   useEffect(() =>{verifyUser()},[])
 
@@ -32,18 +30,17 @@ export default function Login(){
 
   const handleSubmitLogin = async (e) =>{
     e.preventDefault()
-    //console.log(credentials);
+
     const res = await axios.post('https://server-una-opinion-mas-production.up.railway.app/api/auth/login', credentials,{
     //const response = await axios.post('http://localhost:4000/api/auth/login', credentials, {
       withCredentials: true
     })
-    console.log(res)
+    //console.log(res)
 
     if(res.status === 200 && res.data.login){
 
-      setSession(true)
-      setToken(res.data.nbcAuth)
-
+      window.sessionStorage.setItem('sessionAuth', res.data.nbcAuth)
+      window.sessionStorage.setItem('login', true)
       router.push('/')
     }
 
