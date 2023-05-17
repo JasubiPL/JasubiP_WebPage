@@ -1,0 +1,36 @@
+.modal{
+  position: absolute;
+ top: 200px;
+ left: 0;
+ width: 100vw;
+ display: flex;
+ justify-content: center;
+ animation: showModal 4s;
+}
+
+.modal p{
+  background-color: var(--principal-color);
+  min-width: 350px;
+  min-height: 50px;
+  border-radius: 10px;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  font-size: 16px;
+}
+@keyframes showModal {
+  0%{
+    top: -200px;
+  }
+  25%{
+    top: 200px;
+  }
+  75%{
+    top: 200px;
+  }
+  100%{
+    top: -200px;
+  }
+
+  
+}

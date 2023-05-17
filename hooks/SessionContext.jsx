@@ -14,9 +14,9 @@ export default function SessionProvider({ children }){
     setToken(getToken)
   },[])
 
-  console.log(token)
-  console.log(user)
-  console.log(session)
+  // console.log(token)
+  // console.log(user)
+  // console.log(session)
 
   return(
     <SessionContext.Provider value={{
