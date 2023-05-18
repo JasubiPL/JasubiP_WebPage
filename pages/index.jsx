@@ -7,11 +7,10 @@ import { startSlider } from '@/lib/handleSlider';
 import AuthorAvatar from '@/components/AuthorAvatar';
 import Topic from '@/components/Topic';
 
-
-
 export default function Home({ posts }) {
   useEffect(() => {startSlider()},[]);
 
+  
   posts.sort((a, b) => parseInt(a.id) > parseInt(b.id) ? -1 : 1);
   const lastPosts = posts
   const allPosts = posts

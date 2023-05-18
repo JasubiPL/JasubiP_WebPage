@@ -6,6 +6,7 @@ import PageLayout from "@/components/PageLayout"
 import styles from '@/styles/dashboard/Dashboard.module.css'
 import SetPost from "@/components/dashboard/SetPost"
 import { SessionContext } from "@/hooks/SessionContext"
+import MyPosts from "@/components/dashboard/MyPosts"
 
 export default function Dashboard(){
   const { user } = useContext(SessionContext)
@@ -44,7 +45,7 @@ export default function Dashboard(){
           myPost:styles.active,
           favorites:styles.inactive,
         })
-        setSection('No disponible')
+        setSection(<MyPosts />)
         break
 
       case 'favorites':
