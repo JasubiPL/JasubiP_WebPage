@@ -36,9 +36,9 @@ export default function PageLayout({
       <meta property="twitter:description" content={description} />
 
       {/*  Etiquetas meta para redes sociales */}
-      {/* <meta property="og:title" content={title} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`https://unaopinionmas.vercel.app${shareImage}`} /> */}
+      <meta property="og:image" content={`https://unaopinionmas.vercel.app${shareImage}`} />
       <meta property="og:type" content="article" />
       <meta property="og:url" content="https://unaopinionmas.vercel.app" />
       <meta property="og:site_name" content="Nobody Cares" />
