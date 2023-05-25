@@ -30,24 +30,11 @@ export default function Home({ posts }) {
   
 
   return (
-    <PageLayout 
-      title='Home'
-      description='
-      Descubre en nuestra página web una gran variedad de 
-      temas de interés, desde tecnología y ciencia hasta arte y entretenimiento. 
-      Encontrarás artículos y opiniones interesantes sobre los temas más relevantes de 
-      actualidad, escritos por expertos y apasionados en cada materia. 
-      Mantente actualizado y expande tus conocimientos con nuestro contenido de calidad. 
-      ¡Visítanos ahora y descubre todo lo que tenemos para ofrecer!
-      '
-      keywords='
-      innovación tecnológica, tendencias tecnológicas, 
-      dispositivos móviles, inteligencia artificial, ciberseguridad, programación, redes sociales, 
-      transformación digital, marketing digital, videojuegos, realidad virtual, e-commerce, 
-      pensamiento crítico, ética, moral, valores, metafísica, epistemología, lógica, argumentación, 
-      filosofía política, filosofía de la ciencia, filosofía del arte, actualidad política, 
-      democracia, derechos humanos, economía, política internacional, ideologías políticas, liderazgo, libertad,
-      '
+    <PageLayout
+      shareImage='/img/reflection/nobody-cares-1-wallpaper.jpg'
+      title='Blog  de opinion sobre diversos temas'
+      description='En Nobody Cares Blog, encontraras una gran variedad de temas de interés, desde tecnología y ciencia hasta arte y entretenimiento. Encontrarás artículos y opiniones interesantes sobre los temas más relevantes de actualidad, escritos por expertos y apasionados en cada materia.'
+      keywords='nobodycares, nobody cares, nobody cares blog, blog, blog personal, opinion publica,temas de interes, noticias, news, blogs, blogs politicos, tendencias, blog de tecnologia, articulos de tecnologia, articulos de reflexion, blogs de opinion, articulo de videojuegos, articulos de cultura, innovación tecnológica, tendencias tecnológicas, inteligencia artificial, ciberseguridad, programación,  transformación digital, videojuegos, realidad virtual, reflexión, filosofía, política,educion financiera'
       canonical='https://unaopinionmas.vercel.app/'
     >
       <section className={styles.slider_container}>

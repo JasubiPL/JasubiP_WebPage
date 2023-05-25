@@ -40,8 +40,8 @@ export default function PageLayout({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={`https://unaopinionmas.vercel.app${shareImage}`} /> */}
       <meta property="og:type" content="article" />
-      <meta property="og:url" content="https://unaopinionmas.vercel.app/" />
-      <meta property="og:site_name" content="Nobody Cares " />
+      <meta property="og:url" content="https://unaopinionmas.vercel.app" />
+      <meta property="og:site_name" content="Nobody Cares" />
       <meta property="og:locale" content="es_ES" />
       
       {/* Estilos CSS y otros recursos */}

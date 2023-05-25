@@ -9,7 +9,7 @@ export default function Topic({ topic, icon }){
      icon === 'Tecnologia' ? <FcElectronics /> : 
      icon === 'Curiosidades' ? <FcRating /> :
      icon === 'Development' ? <FcCommandLine /> :
-     icon === 'Reflection' ? <FcDecision /> :
+     icon === 'Reflexión' ? <FcDecision /> :
      icon === "Gaming" ? <RiGameFill color='#ff8f00'/> :"" }
     </>
   )
