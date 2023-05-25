@@ -7,7 +7,6 @@ import styles from '@/styles/dashboard/Dashboard.module.css'
 import SetPost from "@/components/dashboard/SetPost"
 import { SessionContext } from "@/hooks/SessionContext"
 import MyPosts from "@/components/dashboard/MyPosts"
-import Head from "next/head"
 
 export default function Dashboard(){
   const { user } = useContext(SessionContext)
@@ -62,9 +61,6 @@ export default function Dashboard(){
 
 return(
   <PageLayout title={`Dashboard ${user[0]}`}>
-    <Head>
-      <meta name="google-site-verification" content="HSIHpvU5swFz_smB2ySAV2YUq4XzSQccc9mjyVWUwvE" />
-    </Head>
     <Loading />
     <section className={styles.container}>
       <aside className={styles.aside}>

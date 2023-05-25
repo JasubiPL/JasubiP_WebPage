@@ -19,6 +19,7 @@ export default function PageLayout({
       
       {/*  Etiquetas meta para SEO */}
       <title>{`${title} | Nobody Cares`}</title>
+      <meta name="google-site-verification" content="HSIHpvU5swFz_smB2ySAV2YUq4XzSQccc9mjyVWUwvE" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Jasubi Piñeyro - JasubiP" />
