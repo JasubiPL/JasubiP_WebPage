@@ -21,7 +21,7 @@ export default function PageLayout({
       <title>{`${title} | Nobody Cares`}</title>
       <meta name="google-site-verification" content="HSIHpvU5swFz_smB2ySAV2YUq4XzSQccc9mjyVWUwvE" />
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      <meta name="keywords" content={`nobodycares, una opinion mas, opinion, posteo, nobody cares, nobody cares blog, blog, blog personal, blogs, articulo, articulos, jasubip, jasubi piñeyro, erik guzman, gabogin360, ${keywords}`} />
       <meta name="author" content="Jasubi Piñeyro - JasubiP" />
       <meta name="language" content="Español" />
       <meta name="robots" content="index,follow" />
