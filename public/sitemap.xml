@@ -1,79 +1,92 @@
-<xml version="1.0" encoding="UTF-8">
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://unaopinionmas.vercel.app/</loc>
-    <lastmod>2023-03-05T14:20:00+00:00</lastmod>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/sobre-nosotros</loc>
-    <lastmod>2023-04-15T16:20:00+00:00</lastmod>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/la-inteligencia-artificials</loc>
-    <lastmod>2023-04-25T11:32:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/john-wick-4-resela</loc>
-    <lastmod>2023-04-11T16:20:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/super-mario-blos-movie</loc>
-    <lastmod>2023-04-16T22:13:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/la-escalofriante-historia-de-la-sirenita</loc>
-    <lastmod>2023-04-21T10:45:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/nextjs</loc>
-    <lastmod>2023-04-25T09:06:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/amazone-fresh</loc>
-    <lastmod>2023-04-27T23:14:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/switch-2</loc>
-    <lastmod>2023-04-27T16:41:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/dios-en-tu-vida</loc>
-    <lastmod>2023-05-05T16:41:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/pinocho-historia</loc>
-    <lastmod>2023-05-03T18:59:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/hansel-gretel</loc>
-    <lastmod>2023-05-04T16:34:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://unaopinionmas.vercel.app/posts/starwars-day</loc>
-    <lastmod>2023-05-04T22:41:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-    <url>
-    <loc>https://unaopinionmas.vercel.app/posts/calidad-laboral</loc>
-    <lastmod>2023-05-12T20:41:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-    <url>
-    <loc>https://unaopinionmas.vercel.app/posts/nobody-cares-1</loc>
-    <lastmod>2023-05-24T21:51:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://unaopinionmas.vercel.app/</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/login</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/nobody-cares-1</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/calidad-laboral</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/starwars-day</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/hansel-gretel</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/pinocho-historia</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/dios-en-tu-vida</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/switch-2</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/amazone-fresh</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/nextjs</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/la-escalofriante-historia-de-la-sirenita</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/super-mario-blos-movie</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/john-wick-4-resela</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/posts/la-inteligencia-artificial</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://unaopinionmas.vercel.app/sobre-nosotros</loc>
+  <lastmod>2023-05-25T19:00:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
-</xml>
