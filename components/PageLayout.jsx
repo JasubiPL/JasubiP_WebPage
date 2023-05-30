@@ -22,7 +22,7 @@ export default function PageLayout({
       <meta name="google-site-verification" content="HSIHpvU5swFz_smB2ySAV2YUq4XzSQccc9mjyVWUwvE" />
       <meta name="description" content={description} />
       <meta name="keywords" content={`nobodycares, una opinion mas, opinion, blog de opinion, posteo, nobody cares, nobody cares blog, blog, blog personal, blogs, articulo, articulos, jasubip, jasubi piñeyro, erik guzman, gabogin360, ${keywords}`} />
-      <meta name="author" content="Jasubi Piñeyro - JasubiP" />
+      <meta name="author" content="Jasubi Piñeyro, JasubiP" />
       <meta name="language" content="Español" />
       <meta name="robots" content="index,follow" />
       <link rel="canonical" href={canonical} />
@@ -32,16 +32,16 @@ export default function PageLayout({
       <meta name="twitter:site" content="@NobodyCaresOffi" />
       <meta name="twitter:creator" content="@NobodyCaresOffi" />
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:image" content={`https://unaopinionmas.vercel.app${shareImage}`} />
+      <meta property="twitter:image" content={`https://nobodycares.vercel.app${shareImage}`} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
 
-      {/*  Etiquetas meta para redes sociales */}
+      {/*  Etiquetas meta para redes sociales 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`https://unaopinionmas.vercel.app${shareImage}`} />
+      <meta property="og:image" content={`https://unaopinionmas.vercel.app${shareImage}`} />*/}
       <meta property="og:type" content="article" />
-      <meta property="og:url" content="https://unaopinionmas.vercel.app" />
+      <meta property="og:url" content="https://nobodycares.vercel.app" />
       <meta property="og:site_name" content="Nobody Cares" />
       <meta property="og:locale" content="es_ES" />
       

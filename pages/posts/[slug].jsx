@@ -17,7 +17,7 @@ export default function Post({ source, frontmatter }) {
       title={frontmatter.title} 
       description={frontmatter.description} 
       keywords={frontmatter.keywords} 
-      canonical={`https://unaopinionmas.vercel.app${router.asPath}`}
+      canonical={`https://nobodycares.vercel.app${router.asPath}`}
       shareImage={frontmatter.wallpaper}>
       <StickyShareButtons
         config={{
@@ -82,6 +82,6 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: false,
   }
 }

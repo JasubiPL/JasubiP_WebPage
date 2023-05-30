@@ -32,10 +32,10 @@ export default function Home({ posts }) {
   return (
     <PageLayout
       shareImage='/img/reflection/nobody-cares-1-wallpaper.jpg'
-      title='Blog de opinion sobre diversos temas'
+      title='Blog sobre diversos temas'
       description='En Nobody Cares Blog, encontraras una gran variedad de Publicaciónes sobre gadgets, tecnología, software y videojuegos. Últimas tecnologías en electrónica de consumo y novedades tecnológicas en México y el mundo"'
       keywords='opinion publica,temas de interes, noticias, news, blogs politicos, tendencias, blog de tecnologia, articulos de tecnologia, articulos de reflexion, blogs de opinion, articulo de videojuegos, articulos de cultura, innovación tecnológica, tendencias tecnológicas, inteligencia artificial, ciberseguridad, programación,  transformación digital, videojuegos, realidad virtual, reflexión, filosofía, política,educion financiera'
-      canonical='https://unaopinionmas.vercel.app/'
+      canonical='https://nobodycares.vercel.app/'
     >
       <section className={styles.slider_container}>
         {lastPosts.slice(0, 4).map(post =>(
