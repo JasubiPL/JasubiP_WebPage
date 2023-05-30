@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://unaopinionmas.vercel.app/sitemap.xml
+Sitemap: https://nobodycares.vercel.app/sitemap.xml
