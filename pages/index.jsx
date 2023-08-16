@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { startSlider } from '@/lib/handleSlider';
 import AuthorAvatar from '@/components/AuthorAvatar';
-import Topic from '@/components/Topic';
 
 export default function Home({ posts }) {
   useEffect(() => {startSlider()},[]);
@@ -37,37 +36,11 @@ export default function Home({ posts }) {
       keywords='opinion publica,temas de interes, noticias, news, blogs politicos, tendencias, blog de tecnologia, articulos de tecnologia, articulos de reflexion, blogs de opinion, articulo de videojuegos, articulos de cultura, innovación tecnológica, tendencias tecnológicas, inteligencia artificial, ciberseguridad, programación,  transformación digital, videojuegos, realidad virtual, reflexión, filosofía, política,educion financiera'
       canonical='https://nobodycares.vercel.app/'
     >
-      <section className={styles.slider_container}>
-        {lastPosts.slice(0, 4).map(post =>(
-          <article key={post.slug} className={`${styles.slide} slide` }>
-            <img priority='true' src={post.wallpaper} alt={post.alt} />
-            <div className={styles.slide_content}>
-              <div className={styles.slide_content_graddient}>
-                <h2>{post.title}</h2>
-                <p>{post.description}</p>
-                <Link href={`/posts/${post.slug}`}>Ver Post</Link>
-              </div>
-            </div>
-          </article>
-        ))}
-      </section>
       <section className={styles.post_blog_container}>
-        <header className={styles.post_header}><
-          h2 className={styles._blog_container_title}>Últimos artículos</h2>
-          <div className={styles._blog_container_filter}>
-            <label htmlFor="Temas">Temas</label>
-            <select id='Temas' onChange={() => setFilter(event.target.value)}>
-              <option className={styles.filter_option} value="All">Todo</option>
-              <option value="Cine">Cine</option>
-              <option value="Tecnologia">Tecnologia</option>
-              <option value="Curiosidades">Curiosidades</option>
-              <option value="Desarrollo de Software">Programación</option>
-              <option value="Reflexión">Reflexión</option>
-              <option value="Gaming">Gaming</option>
-            </select>
-          </div>
+        <header className={styles.post_header}>
+          <h2 className={styles._blog_container_title}>Últimos artículos</h2>
         </header>
-        {postFiltered.map(post => (
+        {postFiltered.slice(0,4).map(post => (
           <li key={post.slug} className={styles.post_item}>
             <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
               <img loading='lazy' layout='responsive' src={post.poster} alt={post.alt} />
@@ -83,12 +56,23 @@ export default function Home({ posts }) {
                 <h3 className={styles.post_item_title}>{post.title}</h3>
               </div>
             </Link>
-            <p className={styles.post_item_footer}>
-              <Topic topic={post.topic} icon={post.icon} />
-            </p>
             <p className={styles.post_item_footer}>{post.date}</p>
           </li>
         ))}
+      </section>
+      <section className={styles.categories_section}>
+        <h2>Series</h2>
+        <section className={styles.categories_container}>
+          <Link href={"/"}>
+            <h3>Nobody Cares Vol.1</h3>
+            <img src="/img/backgrounds/blog.jpg" alt="Serie Nobody cares" />
+          </Link>
+          <Link href={"/"}>
+            <h3>Finanzas Personales</h3>
+            <img src="/img/backgrounds/economy.png" alt="Serie Nobody cares" />
+          </Link>
+        </section>
+
       </section>
     </PageLayout>
   )
