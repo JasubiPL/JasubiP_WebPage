@@ -65,11 +65,11 @@ export default function Home({ posts }) {
         <section className={styles.categories_container}>
           <Link href={"/"}>
             <h3>Nobody Cares Vol.1</h3>
-            <img src="/img/backgrounds/blog.jpg" alt="Serie Nobody cares" />
+            <img src="/img/Backgrounds/blog.jpg" alt="Serie Nobody cares" />
           </Link>
           <Link href={"/"}>
             <h3>Finanzas Personales</h3>
-            <img src="/img/backgrounds/economy.png" alt="Serie Nobody cares" />
+            <img src="/img/Backgrounds/economy.png" alt="Serie Nobody cares" />
           </Link>
         </section>
 
