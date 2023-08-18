@@ -2,31 +2,12 @@ import styles from '@/styles/Home.module.css'
 import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { startSlider } from '@/lib/handleSlider';
 import AuthorAvatar from '@/components/AuthorAvatar';
 
 export default function Home({ posts }) {
-  useEffect(() => {startSlider()},[]);
 
   
   posts.sort((a, b) => parseInt(a.id) > parseInt(b.id) ? -1 : 1);
-  const lastPosts = posts
-  const allPosts = posts
-
-  //Categori filter
-  const [filter, setFilter] = useState("All")
-
-  const postFilter = (filter) => {
-    if (filter === 'All'){
-      return allPosts
-    }else{
-      return allPosts.filter(post => post.topic === filter)
-    }
-  }
-
-  const postFiltered = postFilter(filter)
-  
 
   return (
     <PageLayout
@@ -40,7 +21,7 @@ export default function Home({ posts }) {
         <header className={styles.post_header}>
           <h2 className={styles._blog_container_title}>Últimos artículos</h2>
         </header>
-        {postFiltered.slice(0,4).map(post => (
+        {posts.slice(0,4).map(post => (
           <li key={post.slug} className={styles.post_item}>
             <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
               <img loading='lazy' layout='responsive' src={post.poster} alt={post.alt} />
@@ -63,7 +44,7 @@ export default function Home({ posts }) {
       <section className={styles.categories_section}>
         <h2>Series</h2>
         <section className={styles.categories_container}>
-          <Link href={"/"}>
+          <Link href={"/series/nobody-cares-vol-1"}>
             <h3>Nobody Cares Vol.1</h3>
             <img src="/img/Backgrounds/blog.jpg" alt="Serie Nobody cares" />
           </Link>
