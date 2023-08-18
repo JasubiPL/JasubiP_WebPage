@@ -1,16 +1,19 @@
 import PageLayout from "@/components/PageLayout";
 import styles from '@/styles/series/nobody-v1.module.css'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 export default function NobodyCaresVol1(){
+  const [posts, setPosts] = useState([])
   useEffect(() => {
     getPosts()
   },[])
 
   const getPosts = async () =>{
     const res = await axios.get('../../api/posts-NCV1')
-    const posts = res.data
+    setPosts(res.data)
+
 
   }
   return(
@@ -29,11 +32,24 @@ export default function NobodyCaresVol1(){
             <p>Este es el primer volumen de una serie blog donde el autor de NOBODY CARES nos compartirá un poco de su filosofía, sus vivencias y su camino hacia el logro de las metas que se propone</p>
           </section>
         </header>
-      </section>
-      <section className={styles.posts_container}>
-        {
-          posts.map
-        }
+        <section className={styles.posts_container}>
+          <ul className={styles.posts_center}>
+            {
+              posts.map(post => {
+                return(
+                  <li >
+                    <div className={styles.posts_img}>
+                      <img src={post.wallpaper} />
+                    </div>
+                    <h3>{post.title}</h3>
+                    <p>{post.description}</p>
+                    <Link href={`/series/nobody-cares-vol-1/${post.slug}`}>Leer Articulo</Link>
+                  </li>
+                )
+              })
+            }
+          </ul>
+        </section>
       </section>
     </PageLayout>
   )
