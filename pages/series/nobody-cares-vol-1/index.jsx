@@ -37,7 +37,7 @@ export default function NobodyCaresVol1(){
             {
               posts.map(post => {
                 return(
-                  <li >
+                  <li key={post.id}>
                     <div className={styles.posts_img}>
                       <img src={post.wallpaper} />
                     </div>
