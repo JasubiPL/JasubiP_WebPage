@@ -43,7 +43,10 @@ export default function NobodyCaresVol1(){
                     </div>
                     <h3>{post.title}</h3>
                     <p>{post.description}</p>
-                    <Link href={`/series/nobody-cares-vol-1/${post.slug}`}>Leer Articulo</Link>
+                    <footer className={styles.posts_footer}>
+                      <Link href={`/series/nobody-cares-vol-1/${post.slug}`}>Leer Articulo</Link>
+                      <p>{post.date}</p>
+                    </footer>
                   </li>
                 )
               })

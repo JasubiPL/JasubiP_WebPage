@@ -5,7 +5,7 @@ import { getAllFilesMetadata } from "@/lib/mdx"
 export default function handler(req, res) {
 
   const postData = getAllFilesMetadata()
-  console.log(postData)
+  //console.log(postData)
 
   res.status(200).json(postData)
 }

@@ -48,6 +48,10 @@
 .posts_center{
   width: 100%;
   max-width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .posts_center li{
@@ -82,8 +86,18 @@
   padding: 10px 20px;
   border-radius: 5px;
   color: #fff;
-  margin-top: 10px;
   transition: .25s ;
+}
+
+.posts_footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.posts_footer p{
+  padding: 10px 20px;
 }
 
 .posts_center li a:hover{
