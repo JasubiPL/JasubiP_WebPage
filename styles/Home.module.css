@@ -18,6 +18,7 @@
   margin-top: 120px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: .1fr 1fr 1fr;
   gap: 20px;
   padding: 0px 20px;
   margin-bottom: 30px;
@@ -61,7 +62,7 @@
   font-size: 48px;
   width: 100%;
   max-width: 1200px;
-  color: var(--grey-color);
+  color: #fff;
 }
 
 .categories_container{

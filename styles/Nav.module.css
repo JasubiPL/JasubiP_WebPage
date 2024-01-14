@@ -90,7 +90,7 @@
 
 @keyframes blur {
   to{
-    box-shadow: 0px, 0px, 50px, rgba(0, 0, 0, 0.5);
+    box-shadow: 0px, 0px, 50px, var(--secondary-color);
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
   }

@@ -21,8 +21,8 @@ export default function Home({ posts }) {
         <header className={styles.post_header}>
           <h2 className={styles._blog_container_title}>Últimos artículos</h2>
         </header>
-        {selectedPosts.slice(0,4).map(post => (
-          <PostItem post={post}/>
+        {selectedPosts.slice(0,4).map((post, index) => (
+          <PostItem post={post} index={ index }/>
         ))}
       </section>
       <section className={styles.categories_section}>
