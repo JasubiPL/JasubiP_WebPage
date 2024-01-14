@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FaFacebookF } from 'react-icons/fa'
 import { BsTwitter } from 'react-icons/bs'
 import { AiFillInstagram } from 'react-icons/ai'
+import { SocialNetwork } from './SocialNetwors'
 
 export default function Footer(){
   return(
@@ -20,11 +21,7 @@ export default function Footer(){
         <li>
           <Link href={'/sobre-nosotros'} >Sobre Nosotros</Link>
         </li>
-        <li>
-          <a href='https://www.facebook.com/profile.php?id=100092340722303' target='_blank'><FaFacebookF /></a>
-          <a href='https://twitter.com/NobodyCaresOffi' target='_blank'><BsTwitter /></a>
-          <a href='https://www.instagram.com/nobodycaresoffi/' target='_blank'><AiFillInstagram /></a>
-        </li>
+        <SocialNetwork />
       </ul>
     </footer>
   )
