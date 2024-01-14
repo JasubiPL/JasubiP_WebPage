@@ -7,6 +7,10 @@
   gap: 10px;
   position: fixed;
   z-index: 9;
+  animation: blur linear both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+ 
 }
 
 .nav_center{
@@ -82,4 +86,12 @@
     padding: 10px 20px;
   }
 
+}
+
+@keyframes blur {
+  to{
+    box-shadow: 0px, 0px, 50px, rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
 }

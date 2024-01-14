@@ -12,7 +12,7 @@ export default function Footer(){
           href="https://www.facebook.com/jasubip" 
           target='_blank'
         >
-          <p>Con Amor Por</p> 
+          <p>Powerwd by</p> 
           <img loading='lazy' src="/img/jasubip-logo.png" alt="Desarrollada por JasubiP" />
         </a>
       </div>

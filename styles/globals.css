@@ -1,6 +1,6 @@
 :root{
   --principal-color: #2E56B2;
-  --principal-color-opacity: rgba(46, 86, 178, .2);
+  --secondary-color: #08061f;
   --grey-color:#3b3b3b;
   --titles: 'Poppins', sans-serif;
 }
@@ -24,4 +24,5 @@ body {
   background-image: url(/img/Backgrounds/body.webp);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
