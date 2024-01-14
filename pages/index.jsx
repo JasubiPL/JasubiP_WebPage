@@ -3,6 +3,7 @@ import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
 import { PostItem } from '@/components/PostItem';
+import Script from 'next/script'
 
 export default function Home({ posts }) {
 
@@ -17,6 +18,19 @@ export default function Home({ posts }) {
       keywords='opinion publica,temas de interes, noticias, news, blogs politicos, tendencias, blog de tecnologia, articulos de tecnologia, articulos de reflexion, blogs de opinion, articulo de videojuegos, articulos de cultura, innovación tecnológica, tendencias tecnológicas, inteligencia artificial, ciberseguridad, programación,  transformación digital, videojuegos, realidad virtual, reflexión, filosofía, política,educion financiera'
       canonical='https://nobodycares.vercel.app/'
     >
+        <div className="container">
+          <Script id="google-analytics">
+            {`
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+              ga('create', 'UA-XXXXX-Y', 'auto');
+              ga('send', 'pageview');
+            `}
+          </Script>
+        </div>
       <section className={styles.post_blog_container}>
         <header className={styles.post_header}>
           <h2 className={styles._blog_container_title}>Últimos artículos</h2>
