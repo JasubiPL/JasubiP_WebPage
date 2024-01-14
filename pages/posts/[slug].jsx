@@ -3,8 +3,6 @@ import PageLayout from '@/components/PageLayout';
 import AuthorAvatar from '@/components/AuthorAvatar';
 import { useRouter } from 'next/router';
 import { getFiles, getFilesBySlug } from '@/lib/mdx';
-import { FcClapperboard, FcElectronics, FcRating, FcCommandLine, FcDecision } from 'react-icons/fc'
-import { RiGameFill  } from 'react-icons/ri'
 import {StickyShareButtons} from 'sharethis-reactjs';
 import { MDXRemote } from 'next-mdx-remote';
 import Topic from '@/components/Topic';

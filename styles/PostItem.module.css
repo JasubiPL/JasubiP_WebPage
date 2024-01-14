@@ -5,8 +5,7 @@
   display: flex;
   border-radius: 10px;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, .1);
-  backdrop-filter: blur(10px);
+  background-color: var(--bg-200);
   animation: showItem .5s;
   transition: all .2s;
 }
@@ -44,12 +43,12 @@
   overflow-wrap: break-word;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-100)
 }
 
 ._item__description, ._item__date{
   padding: 5px;
-  color: #fff;
+  color: var(--text-200);
 }
 
 ._item__date{

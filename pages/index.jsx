@@ -4,6 +4,7 @@ import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
 import { PostItem } from '@/components/PostItem';
 import Script from 'next/script'
+import TopicCard from '@/components/TopicsCard';
 
 export default function Home({ posts }) {
 
@@ -40,16 +41,18 @@ export default function Home({ posts }) {
         ))}
       </section>
       <section className={styles.categories_section}>
-        <h2>Series</h2>
+        <h2>Proyectos</h2>
         <section className={styles.categories_container}>
-          <Link href={"/series/nobody-cares-vol-1"}>
-            <h3>Nobody Cares Vol.1</h3>
-            <img src="/img/Backgrounds/blog.jpg" alt="Serie Nobody cares Vol 1" />
-          </Link>
-          <Link href={"/"}>
-            <h3>Finanzas Personales</h3>
-            <img src="/img/Backgrounds/economy.png" alt="Serie Nobody cares" />
-          </Link>
+          <TopicCard 
+            title='Nobody Cares Vol.1'
+            slug='/series/nobody-cares-vol-1'
+            img='/img/Backgrounds/blog.jpg'
+          />
+          <TopicCard 
+            title='Nobody Cares Vol.1'
+            slug='/series/nobody-cares-vol-1'
+            img='/img/Backgrounds/blog.jpg'
+          />
         </section>
 
       </section>
