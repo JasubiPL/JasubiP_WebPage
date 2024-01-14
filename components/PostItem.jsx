@@ -1,0 +1,16 @@
+import styles from '@/styles/PostItem.module.css'
+import Link from 'next/link'
+
+export const PostItem = ({ post }) =>{
+  
+  return(
+    <li key={post.slug} className={styles.post_item}>
+      <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
+        <img loading='lazy' layout='responsive' src={post.poster} alt={post.alt} />
+        <div className={styles._item_title_container}>
+          <h3 className={styles.post_item_title}>{post.title}</h3>
+        </div>
+      </Link>
+    </li>
+  )
+}

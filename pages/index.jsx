@@ -2,12 +2,12 @@ import styles from '@/styles/Home.module.css'
 import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
-import AuthorAvatar from '@/components/AuthorAvatar';
+import { PostItem } from '@/components/PostItem';
 
 export default function Home({ posts }) {
 
   
-  posts.sort((a, b) => parseInt(a.id) > parseInt(b.id) ? -1 : 1);
+  const selectedPosts = posts.sort((a, b) => parseInt(a.id) > parseInt(b.id) ? -1 : 1);
 
   return (
     <PageLayout
@@ -21,24 +21,8 @@ export default function Home({ posts }) {
         <header className={styles.post_header}>
           <h2 className={styles._blog_container_title}>Últimos artículos</h2>
         </header>
-        {posts.slice(0,4).map(post => (
-          <li key={post.slug} className={styles.post_item}>
-            <Link href={`/posts/${post.slug}`} className={styles.post_item_poster}>
-              <img loading='lazy' layout='responsive' src={post.poster} alt={post.alt} />
-              <div className={styles._item_title_container}>
-                <div className={styles._item_uthor}>
-                  <AuthorAvatar 
-                  width='30px'
-                  height='30px'
-                  authorName={post.author}
-                  color='white'
-                  />
-                </div>
-                <h3 className={styles.post_item_title}>{post.title}</h3>
-              </div>
-            </Link>
-            <p className={styles.post_item_footer}>{post.date}</p>
-          </li>
+        {selectedPosts.slice(0,4).map(post => (
+          <PostItem post={post}/>
         ))}
       </section>
       <section className={styles.categories_section}>

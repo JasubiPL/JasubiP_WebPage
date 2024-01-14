@@ -22,8 +22,7 @@ export default function Nav(){
     <nav className={styles.nav}>
       <section className={styles.nav_center}>
         <Link className={styles.nav_title_container} href='/'>
-          <img src='/img/logo.png' alt='logo icon' />
-          <h2 className={styles.nav_title}><span>NOBODY</span>CARES </h2>
+          <img src='/img/imagotipo-Blanco.png' alt='logo icon' />
         </Link>
         <div className={styles.social_network_container}>
           <a href='https://www.facebook.com/profile.php?id=100092340722303' target='_blank'><FaFacebookF /></a>

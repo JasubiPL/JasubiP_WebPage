@@ -19,3 +19,9 @@ h1, h2, h3, span{
   font-family: var(--titles);
   font-weight: 100;
 }
+
+body {
+  background-image: url(/img/Backgrounds/body.webp);
+  background-position: center;
+  background-size: cover;
+}
