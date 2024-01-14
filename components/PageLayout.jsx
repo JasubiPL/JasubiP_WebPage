@@ -46,7 +46,7 @@ export default function PageLayout({
       <meta property="og:locale" content="es_ES" />
       
       {/* Estilos CSS y otros recursos */}
-      <link rel="icon" href="/img/icon.jpg" />
+      <link rel="icon" href="/img/imagotipo-blanco.png" />
 
     </Head>
     <header>
