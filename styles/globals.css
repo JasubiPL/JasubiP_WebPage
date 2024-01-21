@@ -47,6 +47,11 @@ main{
   min-height: 85dvh;
 }
 
+.error{
+  animation: error alternate infinite 1s ;
+
+}
+
 /* Estos son estilos normales */
 
 /* Post Item styles */
@@ -171,5 +176,32 @@ main{
     & img{
       width: 100%;
      }
+  }
+}
+
+@keyframes error {
+  0%{
+    transform: translate(20px, 20px) scale(.5);
+  }
+  24%{
+    transform: translate(20px, 20px) scale(.5);
+  }
+  25%{
+    transform: translate(0px, 0px) scale(.6);
+  }
+  49%{
+    transform: translate(0px, 0px) scale(.6);
+  }
+  50%{
+    transform: translate(-20px, -20px) scale(.7);
+  }
+  74%{
+    transform: translate(-20px, -20px) scale(.7);
+  }
+  75%{
+    transform: translate(-40px, -40px) scale(.8);
+  }
+  100%{
+    transform: translate(-40px, -40px) scale(.8);
   }
 }
