@@ -39,22 +39,7 @@ export default function Home({ posts }) {
         {selectedPosts.slice(0,4).map((post, index) => (
           <PostItem key={post.title} post={post} index={ index }/>
         ))}
-      </section>
-      <section className={styles.categories_section}>
-        <h2>Proyectos</h2>
-        <section className={styles.categories_container}>
-          <TopicCard 
-            title='Nobody Cares Vol.1'
-            slug='/series/nobody-cares-vol-1'
-            img='/img/Backgrounds/blog.jpg'
-          />
-          <TopicCard 
-            title='Nobody Cares Vol.1'
-            slug='/series/nobody-cares-vol-1'
-            img='/img/Backgrounds/blog.jpg'
-          />
-        </section>
-
+        <Link className={styles.post_blog__footer} href='/posts'> Artículos anteriores → </Link>
       </section>
     </PageLayout>
   )

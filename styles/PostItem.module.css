@@ -35,7 +35,7 @@
 
 .post_item_poster img{
   object-fit: cover;
-  aspect-ratio: 9 / 11 ;
+  aspect-ratio: 3 / 4 ;
   border-radius: 15px;
   overflow: hidden;
   padding: 5px;
@@ -47,13 +47,12 @@
   height: 100%;
 }
 
-
-
 .post_item_title{
   overflow-wrap: break-word;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--text-100)
+  color: var(--text-100);
+
 }
 
 ._item__description, ._item__date{
@@ -63,4 +62,15 @@
 
 ._item__date{
   margin-top: 20px;
+}
+
+@media screen and (max-width:700px){
+
+  .post_item_poster img{
+    aspect-ratio: 1 / 1;
+  }
+
+  ._item_title_container{
+    height: auto;
+  }
 }

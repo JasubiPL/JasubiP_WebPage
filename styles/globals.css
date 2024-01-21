@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root{
   --titles: 'Poppins', sans-serif;
   --primary-100:#0085ff;
@@ -33,6 +37,14 @@ h1, h2, h3, span{
 body, html {
   background-color: var(--bg-100);
   color-scheme: dark;
+}
+
+p{
+  text-wrap: pretty;
+}
+
+main{
+  min-height: 85dvh;
 }
 
 /* Estos son estilos normales */
