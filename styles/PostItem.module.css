@@ -20,7 +20,17 @@
 }
 
 .post_item:hover{
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  background-color: var(--accent-100);
+  
+  & ._item__description{
+    color: var(--text-100);
+  }
+
+  & ._item__date{
+    color: var(--text-100);
+  }
+
 }
 
 .post_item_poster img{

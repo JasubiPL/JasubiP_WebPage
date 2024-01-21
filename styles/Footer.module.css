@@ -1,6 +1,6 @@
 .footer{
   width: 100%;
-  background-color: var(--bg-100);
+  background-color: var(--bg-200);
   backdrop-filter: blur(10px);
   padding: 60px 20px;
   display: flex;

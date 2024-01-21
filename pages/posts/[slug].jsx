@@ -34,20 +34,20 @@ export default function Post({ source, frontmatter }) {
       />
       <section className={styles.post_header}>
         <div className={styles.post_header_center}>
-          <img src={frontmatter.wallpaper} alt={frontmatter.alt}/>
-        </div>
-      </section>
-      <section className={styles.post_source}>
-        <div className={styles.post_source_center}>
-          <AuthorAvatar
-            authorName={frontmatter.author}
-            width='50px'
-            height='50px'
-          />
-          <small className={styles.post_source_date}>Publicado: {frontmatter.date}</small>
-          <span className={styles.post_source_topic}>
-            <Topic topic={frontmatter.topic} icon={frontmatter.icon} />
-          </span>
+          <div className={styles.post_header_center}>
+            <div className={styles.post_header_img}>
+              <img className={styles.post_img} src={frontmatter.poster} alt="" />
+            </div>
+            <div className={styles.post_header_right}>
+              <h1 className={styles.post_title}>{ frontmatter.title }</h1>
+              <div className={styles.post_source}>
+                <small className={styles.post_source_date}>Publicado: {frontmatter.date}</small>
+                <span className={styles.post_source_topic}>
+                  <Topic topic={frontmatter.topic} icon={frontmatter.icon} />
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section className={styles.post_container}>
