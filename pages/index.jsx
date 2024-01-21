@@ -2,7 +2,7 @@ import styles from '@/styles/Home.module.css'
 import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
-import { PostItem } from '@/components/PostItem';
+import { PostItemIndex } from '@/components/PostItemIndex';
 import Script from 'next/script'
 import TopicCard from '@/components/TopicsCard';
 
@@ -37,7 +37,7 @@ export default function Home({ posts }) {
           <h2 className={styles._blog_container_title}>Últimos artículos</h2>
         </header>
         {selectedPosts.slice(0,4).map((post, index) => (
-          <PostItem key={post.title} post={post} index={ index }/>
+          <PostItemIndex key={post.title} post={post} index={ index }/>
         ))}
         <Link className={styles.post_blog__footer} href='/posts'> Artículos anteriores → </Link>
       </section>
