@@ -36,7 +36,7 @@ export default function Post({ source, frontmatter }) {
         <div className={styles.post_header_center}>
           <div className={styles.post_header_center}>
             <div className={styles.post_header_img}>
-              <img className={styles.post_img} src={frontmatter.poster} alt="" />
+              <img className={styles.post_img} src={frontmatter.poster} alt={frontmatter.alt} />
             </div>
             <div className={styles.post_header_right}>
               <h1 className={styles.post_title}>{ frontmatter.title }</h1>
