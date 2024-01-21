@@ -1,8 +1,4 @@
 import styles from '@/styles/Footer.module.css'
-import Link from 'next/link'
-import { FaFacebookF } from 'react-icons/fa'
-import { BsTwitter } from 'react-icons/bs'
-import { AiFillInstagram } from 'react-icons/ai'
 import { SocialNetwork } from './SocialNetwors'
 
 export default function Footer(){
@@ -18,9 +14,6 @@ export default function Footer(){
         </a>
       </div>
       <ul className={styles.footer_center}>
-        <li>
-          <Link href={'/sobre-nosotros'} >Sobre Nosotros</Link>
-        </li>
         <SocialNetwork />
       </ul>
     </footer>

@@ -1,6 +1,5 @@
 import styles from '@/styles/Post.module.css'
 import PageLayout from '@/components/PageLayout';
-import AuthorAvatar from '@/components/AuthorAvatar';
 import { useRouter } from 'next/router';
 import { getFiles, getFilesBySlug } from '@/lib/mdx';
 import {StickyShareButtons} from 'sharethis-reactjs';
@@ -15,8 +14,8 @@ export default function Post({ source, frontmatter }) {
       title={frontmatter.title} 
       description={frontmatter.description} 
       keywords={frontmatter.keywords} 
-      canonical={`https://nobodycares.vercel.app${router.asPath}`}
-      shareImage={frontmatter.wallpaper}>
+      canonical={`https://jasubip.vercel.app${router.asPath}`}
+    >
       <StickyShareButtons
         config={{
           show_mobile: 'true',

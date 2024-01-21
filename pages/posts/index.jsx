@@ -1,13 +1,21 @@
 import PageLayout from "@/components/PageLayout";
 import {  PostItem } from "@/components/PostItem";
 import { getAllFilesMetadata } from "@/lib/mdx";
+import { useRouter } from "next/router";
 
 export default function AllPost({ posts }){
   
   const selectedPosts = posts.sort((a, b) => parseInt(a.id) > parseInt(b.id) ? -1 : 1);
 
+  const router = useRouter();
+
   return(
-    <PageLayout>
+    <PageLayout 
+      title="Todos los articulos" 
+      description=''
+      keywords=''
+      canonical={`https://jasubip.vercel.app${router.asPath}`}
+    >
       <main className="mt-[100px] w-screen flex flex-col items-center p-3 md:p-6">
         <section className="w-full max-w-screen-xl">
           <h1 className="text-4xl mb-7">Todos Los Post</h1>

@@ -4,7 +4,6 @@ import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
 import { PostItemIndex } from '@/components/PostItemIndex';
 import Script from 'next/script'
-import TopicCard from '@/components/TopicsCard';
 
 export default function Home({ posts }) {
 
@@ -13,11 +12,10 @@ export default function Home({ posts }) {
 
   return (
     <PageLayout
-      shareImage='/img/reflection/nobody-cares-1-wallpaper.jpg'
-      title='Blog sobre diversos temas'
-      description='En Nobody Cares Blog, encontraras una gran variedad de Publicaciónes sobre gadgets, tecnología, software y videojuegos. Últimas tecnologías en electrónica de consumo y novedades tecnológicas en México y el mundo"'
-      keywords='opinion publica,temas de interes, noticias, news, blogs politicos, tendencias, blog de tecnologia, articulos de tecnologia, articulos de reflexion, blogs de opinion, articulo de videojuegos, articulos de cultura, innovación tecnológica, tendencias tecnológicas, inteligencia artificial, ciberseguridad, programación,  transformación digital, videojuegos, realidad virtual, reflexión, filosofía, política,educion financiera'
-      canonical='https://nobodycares.vercel.app/'
+      title='Blog sobre tecnologia y programacion'
+      description='Encontraras una gran variedad de Publicaciónes sobre gadgets, tecnología, software y videojuegos. Últimas tecnologías en electrónica de consumo y novedades tecnológicas en México y el mundo"'
+      keywords='noticias, news, tendencias, articulos de tecnologia, articulo de videojuegos, innovación tecnológica, tendencias tecnológicas, inteligencia artificial, ciberseguridad, programación,  transformación digital, realidad virtual'
+      canonical='https://jasubip.vercel.app/'
     >
         <div className="container">
           <Script id="google-analytics">
