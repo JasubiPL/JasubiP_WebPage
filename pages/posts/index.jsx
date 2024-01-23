@@ -10,12 +10,7 @@ export default function AllPost({ posts }){
   const router = useRouter();
 
   return(
-    <PageLayout 
-      title="Todos los articulos" 
-      description=''
-      keywords=''
-      canonical={`https://jasubip.vercel.app${router.asPath}`}
-    >
+    <PageLayout title="Todos los articulos" >
       <main className="mt-[100px] w-screen flex flex-col items-center p-3 md:p-6">
         <section className="w-full max-w-screen-xl">
           <h1 className="text-4xl mb-7">Todos Los Post</h1>

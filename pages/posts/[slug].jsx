@@ -10,12 +10,7 @@ export default function Post({ source, frontmatter }) {
   const router = useRouter();
 
   return (
-    <PageLayout 
-      title={frontmatter.title} 
-      description={frontmatter.description} 
-      keywords={frontmatter.keywords} 
-      canonical={`https://jasubip.vercel.app${router.asPath}`}
-    >
+    <PageLayout title={frontmatter.title} >
       <StickyShareButtons
         config={{
           show_mobile: 'true',
