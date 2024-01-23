@@ -63,10 +63,6 @@
   align-items: center;
   gap: 5px;
 }
-.post_container h1{
-  color: var(--grey-color);
-  font-size: 65px;
-}
 
 .post_container p{
   color: var(--grey-color);
@@ -77,14 +73,14 @@
   text-wrap:pretty;
 }
 .post_container h2{
-  color: var(--text-100);
+  color: var(--primary-200);
   margin-top: 50px;
   font-weight: bolder;
   font-size: 24px;
 }
 
 .post_container p a{
-  color: var(--principal-color);
+  color: var(--accent-100);
   font-weight: 600;
 }
 
