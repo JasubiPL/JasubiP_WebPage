@@ -1,13 +1,12 @@
 import styles from '@/styles/Post.module.css'
 import PageLayout from '@/components/PageLayout';
-import { useRouter } from 'next/router';
 import { getFiles, getFilesBySlug } from '@/lib/mdx';
 import {StickyShareButtons} from 'sharethis-reactjs';
 import { MDXRemote } from 'next-mdx-remote';
 import Topic from '@/components/Topic';
 
 export default function Post({ source, frontmatter }) {
-  const router = useRouter();
+
 
   return (
     <PageLayout title={frontmatter.title} >
@@ -37,7 +36,7 @@ export default function Post({ source, frontmatter }) {
               <div className={styles.post_source}>
                 <small className={styles.post_source_date}>Publicado: {frontmatter.date}</small>
                 <span className={styles.post_source_topic}>
-                  <Topic topic={frontmatter.topic} icon={frontmatter.icon} />
+                  <Topic topic={frontmatter.topic} />
                 </span>
               </div>
             </div>

@@ -5,10 +5,7 @@ import Footer from './Footer'
 
 export default function PageLayout({
   children, 
-  title = `JasubiP`, 
-  canonical,
-  description,
-  keywords,
+  title = `JasubiP`,
 }){
   
   return(
@@ -18,11 +15,11 @@ export default function PageLayout({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta content="IE=8; IE=9; IE=10; IE=11" http-equiv="X-UA-Compatible" />
       
-      {/*  Etiquetas meta para SEO */}
-      <title>{`JasubiP 🧑‍💻 | ${title}`}</title>
-      
       {/* Estilos CSS y otros recursos */}
       <link rel="icon" href="/img/icono.png" />
+
+      {/*  Etiquetas meta para SEO */}
+      <title>{`JasubiP 🧑‍💻 | ${title}`}</title>
 
     </Head>
     <header>
