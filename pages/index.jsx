@@ -3,7 +3,8 @@ import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
 import { PostItemIndex } from '@/components/PostItemIndex';
-import { FaTwitch } from 'react-icons/fa';
+import { FaTwitch, FaYoutube } from 'react-icons/fa';
+import { TwitchScreen } from '@/components/TwitchScreen';
 
 export default function Home({ posts }) {
 
@@ -22,32 +23,47 @@ export default function Home({ posts }) {
         <Link className={styles.post_blog__footer} href='/posts'> Artículos anteriores → </Link>
       </section>
 
-      <section className='w-full md:max-w-[1280px] flex'>
-        <section className='w-full md:max-w-[35%] p-5 mb-5'>
+      <section className='w-full md:max-w-[1280px] flex flex-wrap'>
+        <section className='w-full lg:max-w-[35%] p-5 mb-5'>
           <h2 className='text-4xl'>Proyectos</h2>
           <section className='mt-8 grid grid-cols-2 gap-4'>
-            <a className=' flex flex-col items-center' target='blanck' href="https://entrenate.vercel.app/">
+            <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://entrenate.vercel.app/">
               <img className='rounded-[35px]' src="/img/apps/entrenate.jpg" alt="Entrenate app" />
               <span className='text-md mt-2 text-center'>Entrenate</span>
             </a>
-            <a className=' flex flex-col items-center' target='blanck' href="https://brightsign-doc.vercel.app/">
+            <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://brightsign-doc.vercel.app/">
               <img className='rounded-[35px]' src="/img/apps/bs-docs.jpg" alt="DocumentacionBrightSign" />
               <span className='text-md mt-2 text-center'>BrightSign Docs</span>
             </a>
-            <a className=' flex flex-col items-center' target='blanck' href="https://web-app-mi-escuelita-virtual.vercel.app/">
+            <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://web-app-mi-escuelita-virtual.vercel.app/">
               <img className='rounded-[35px]' src="/img/apps/mi-escuelita-virtual.jpg" alt="Mi escuelita virtual" />
               <span className='text-md mt-2 text-center'>Mi escuelita Virtual</span>
             </a>
-            <a className=' flex flex-col items-center' target='blanck' href="https://jasubip-memorama-spiderman.vercel.app/">
+            <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://jasubip-memorama-spiderman.vercel.app/">
               <img className='rounded-[35px]' src="/img/apps/spiderama.png" alt="Memorama de spiderman" />
               <span className='text-md mt-2 text-center'>Memorama Spiderman</span>
             </a>
           </section>
         </section>
-        <section className='w-full lg:w-[65%] bg-blue-800 p-5'>
+        <section className='w-full lg:w-[65%] p-5'>
           <h2 className='text-4xl w-full'>Streaming</h2>
-          <section className=' bg-red-400'>
-            x
+          <section className='mt-4'>
+            <section className='flex gap-4 mb-2'>
+              <a 
+                className='flex gap-3 items-center bg-purple-800 text-purple-300 border-2 border-purple-300 rounded-full 
+                px-4 py-1 hover:scale-105 transition-all'
+                href='https://twitch.tv/jasubip'
+                target='blanck'
+              >jasubip <FaTwitch className='w-6 h-6' /></a>
+              <a 
+                className='flex gap-3 items-center bg-red-800 text-red-300 border-2 border-red-300
+                rounded-full px-4 py-1 hover:scale-105 transition-all'
+                href='https://www.youtube.com/channel/UC5LgbMiS-BxoJnxSbE851BQ'
+                target='black'
+              >Jugando con Jasubi <FaYoutube className='w-6 h-6' /></a>
+            </section>
+
+            <TwitchScreen />
           </section>
         </section>
       </section>
