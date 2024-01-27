@@ -3,6 +3,7 @@ import { getAllFilesMetadata } from '@/lib/mdx';
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link';
 import { PostItemIndex } from '@/components/PostItemIndex';
+import { FaTwitch } from 'react-icons/fa';
 
 export default function Home({ posts }) {
 
@@ -20,6 +21,37 @@ export default function Home({ posts }) {
         ))}
         <Link className={styles.post_blog__footer} href='/posts'> Artículos anteriores → </Link>
       </section>
+
+      <section className='w-full md:max-w-[1280px] flex'>
+        <section className='w-full md:max-w-[35%] p-5 mb-5'>
+          <h2 className='text-4xl'>Proyectos</h2>
+          <section className='mt-8 grid grid-cols-2 gap-4'>
+            <a className=' flex flex-col items-center' target='blanck' href="https://entrenate.vercel.app/">
+              <img className='rounded-[35px]' src="/img/apps/entrenate.jpg" alt="Entrenate app" />
+              <span className='text-md mt-2 text-center'>Entrenate</span>
+            </a>
+            <a className=' flex flex-col items-center' target='blanck' href="https://brightsign-doc.vercel.app/">
+              <img className='rounded-[35px]' src="/img/apps/bs-docs.jpg" alt="DocumentacionBrightSign" />
+              <span className='text-md mt-2 text-center'>BrightSign Docs</span>
+            </a>
+            <a className=' flex flex-col items-center' target='blanck' href="https://web-app-mi-escuelita-virtual.vercel.app/">
+              <img className='rounded-[35px]' src="/img/apps/mi-escuelita-virtual.jpg" alt="Mi escuelita virtual" />
+              <span className='text-md mt-2 text-center'>Mi escuelita Virtual</span>
+            </a>
+            <a className=' flex flex-col items-center' target='blanck' href="https://jasubip-memorama-spiderman.vercel.app/">
+              <img className='rounded-[35px]' src="/img/apps/spiderama.png" alt="Memorama de spiderman" />
+              <span className='text-md mt-2 text-center'>Memorama Spiderman</span>
+            </a>
+          </section>
+        </section>
+        <section className='w-full lg:w-[65%] bg-blue-800 p-5'>
+          <h2 className='text-4xl w-full'>Streaming</h2>
+          <section className=' bg-red-400'>
+            x
+          </section>
+        </section>
+      </section>
+
     </PageLayout>
   )
 }
