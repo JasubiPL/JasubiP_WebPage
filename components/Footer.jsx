@@ -10,7 +10,7 @@ export default function Footer(){
           target='_blank'
         >
           <p>Powerwd by</p> 
-          <img loading='lazy' src="/img/jasubip-logo.png" alt="Desarrollada por JasubiP" />
+          <img loading='lazy' src="/img/imagotipo-Blanco.webp" alt="Desarrollada por JasubiP" />
         </a>
       </div>
       <ul className={styles.footer_center}>

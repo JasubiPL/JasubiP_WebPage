@@ -2,6 +2,7 @@ import styles from '@/styles/Nav.module.css'
 import Link from 'next/link'
 import { SocialNetwork } from './SocialNetwors'
 import { useRouter } from 'next/router'
+import { Imagotipo } from './Imagotipo'
 
 export default function Nav(){
   const path = useRouter().pathname
@@ -10,7 +11,7 @@ export default function Nav(){
     <nav id="header-nav" className={styles.nav}>
       <section className={styles.nav_center}>
         <Link className={styles.nav_title_container} href='/'>
-          <img src='/img/imagotipo-Blanco.png' alt='logo icon' />
+          <Imagotipo width={50} height={50} fill='#ffffff'/>
         </Link>
         
         {/* <ul className='flex gap-2 w-full py-2 justify-center order-1 md:order-0 md:w-auto'>

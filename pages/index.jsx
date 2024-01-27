@@ -28,19 +28,19 @@ export default function Home({ posts }) {
           <h2 className='text-4xl'>Proyectos</h2>
           <section className='mt-8 grid grid-cols-2 gap-4'>
             <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://entrenate.vercel.app/">
-              <img className='rounded-[35px]' src="/img/apps/entrenate.jpg" alt="Entrenate app" />
+              <img className='rounded-[35px]' src="/img/apps/entrenate.webp" alt="Entrenate app" />
               <span className='text-md mt-2 text-center'>Entrenate</span>
             </a>
             <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://brightsign-doc.vercel.app/">
-              <img className='rounded-[35px]' src="/img/apps/bs-docs.jpg" alt="DocumentacionBrightSign" />
+              <img className='rounded-[35px]' src="/img/apps/bs-docs.webp" alt="DocumentacionBrightSign" />
               <span className='text-md mt-2 text-center'>BrightSign Docs</span>
             </a>
             <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://web-app-mi-escuelita-virtual.vercel.app/">
-              <img className='rounded-[35px]' src="/img/apps/mi-escuelita-virtual.jpg" alt="Mi escuelita virtual" />
+              <img className='rounded-[35px]' src="/img/apps/mi-escuelita-virtual.webp" alt="Mi escuelita virtual" />
               <span className='text-md mt-2 text-center'>Mi escuelita Virtual</span>
             </a>
             <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://jasubip-memorama-spiderman.vercel.app/">
-              <img className='rounded-[35px]' src="/img/apps/spiderama.png" alt="Memorama de spiderman" />
+              <img className='rounded-[35px]' src="/img/apps/spiderama.webp" alt="Memorama de spiderman" />
               <span className='text-md mt-2 text-center'>Memorama Spiderman</span>
             </a>
           </section>

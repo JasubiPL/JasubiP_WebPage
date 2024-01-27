@@ -16,7 +16,7 @@ export default function PageLayout({
       <meta content="IE=8; IE=9; IE=10; IE=11" http-equiv="X-UA-Compatible" />
       
       {/* Estilos CSS y otros recursos */}
-      <link rel="icon" href="/img/icono.png" />
+      <link rel="icon" href="/img/icon.svg" />
 
       {/*  Etiquetas meta para SEO */}
       <title>{`JasubiP 🧑‍💻 | ${title}`}</title>
