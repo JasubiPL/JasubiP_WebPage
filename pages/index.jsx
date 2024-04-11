@@ -27,9 +27,9 @@ export default function Home({ posts }) {
         <section className='w-full lg:max-w-[35%] p-5 mb-5'>
           <h2 className='text-4xl'>Proyectos</h2>
           <section className='mt-8 grid grid-cols-2 gap-4'>
-            <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://entrenate.vercel.app/">
-              <img className='rounded-[35px]' src="/img/apps/entrenate.webp" alt="Entrenate app" />
-              <span className='text-md mt-2 text-center'>Entrenate</span>
+            <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://youtu.be/1PbtLw1bl6w?si=bit8HUfbFg2Ai2jB">
+              <img className='rounded-[35px]' src="/img/apps/DS_IAMSA.jpg" alt="Señalizacion Digital" />
+              <span className='text-md mt-2 text-center'>Señalizaion Digital</span>
             </a>
             <a className=' flex flex-col items-center hover:scale-105 active:scale-95 transition-all' target='blanck' href="https://brightsign-doc.vercel.app/">
               <img className='rounded-[35px]' src="/img/apps/bs-docs.webp" alt="DocumentacionBrightSign" />

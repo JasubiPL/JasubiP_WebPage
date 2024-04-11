@@ -52,8 +52,6 @@
 
   .footer_center{
     font-size: 12px;
-    flex-direction: column;
-    gap: 30px;
   }
 
   .footer_center li a svg{
