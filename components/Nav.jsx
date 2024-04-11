@@ -13,17 +13,11 @@ export default function Nav(){
         <Link className={styles.nav_title_container} href='/'>
           <Imagotipo width={50} height={50} fill='#ffffff'/>
         </Link>
-        
-        {/* <ul className='flex gap-2 w-full py-2 justify-center order-1 md:order-0 md:w-auto'>
-          <li className={`py-1 px-4 transition-all hover:bg-accent_100  rounded-full ${path === '/' ? 'bg-accent_100' :''}`}>
-            <Link href='/'>Inicio</Link>
-          </li>
-          <li className={`py-1 px-4 transition-all hover:bg-accent_100  rounded-full ${path.includes('/posts')  ? 'bg-accent_100' :''}`}>
-            <Link href='/posts'>Blog</Link>
-          </li>
-        </ul> */}
 
-        <SocialNetwork className='md:order-2'/>
+        <div className="flex gap-2 md:order-2">
+        <SocialNetwork /> 
+        <Link href="/sobre-mi" className='hover:text-accent_100 transition-all hidden md:flex'>| Sobre Mi</Link>
+        </div>
       </section>
     </nav>
   )

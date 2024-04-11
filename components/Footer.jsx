@@ -1,4 +1,5 @@
 import styles from '@/styles/Footer.module.css'
+import Link from 'next/link'
 import { SocialNetwork } from './SocialNetwors'
 
 export default function Footer(){
@@ -15,7 +16,9 @@ export default function Footer(){
       </div>
       <ul className={styles.footer_center}>
         <SocialNetwork />
+        <Link href="/sobre-mi" className='hover:text-accent_100 transition-all text-xl'>| Sobre Mi</Link>
       </ul>
+      
     </footer>
   )
 }
